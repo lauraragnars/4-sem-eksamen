@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Distortion Ø test</title>
+    <script src="blotter.min.js"></script>
+    <script src="liquidDistortMaterial.js"></script>
+    <script src="rollingDistortMaterial.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/nay2vam.css" />
+  </head>
+
+  <body>
+    <header></header>
+
+    <div id="main-title"></div>
+  </body>
+
+  <style>
+    canvas {
+      height: 600px;
+    }
+  </style>
+  <script>
+    let text = new Blotter.Text("Ø", {
+      family: "Pilowlava",
+      size: 70,
+      fill: "#171717",
+    });
+
+    let material = new Blotter.LiquidDistortMaterial();
+
+    let blotter = new Blotter(material, { texts: text });
+
+    material.uniforms.uSpeed.value = 0.2;
+
+    material.uniforms.uVolatility.value = 0.1;
+
+    let scope = blotter.forText(text);
+
+    scope.appendTo(document.querySelector("header"));
+
+    let text2 = new Blotter.Text("DISTORTION Ø", {
+      family: "Pilowlava",
+      size: 220,
+      fill: "black",
+    });
+
+    let material2 = new Blotter.RollingDistortMaterial();
+
+    let blotter2 = new Blotter(material2, { texts: text2 });
+
+    material2.uniforms.uSineDistortSpread.value = 0.077;
+    material2.uniforms.uSineDistortCycleCount.value = 1.4;
+    material2.uniforms.uSineDistortAmplitude.value = 0;
+
+    material2.uniforms.uNoiseDistortVolatility.value = 8;
+    material2.uniforms.uNoiseDistortAmplitude.value = 0.0152;
+    material2.uniforms.uDistortPosition.value = 0.04;
+    material2.uniforms.uRotation.value = 18;
+    material2.uniforms.uSpeed.value = 0.05;
+
+    let scope2 = blotter2.forText(text2);
+
+    scope2.appendTo(document.querySelector("#main-title"));
+  </script>
+</html>
