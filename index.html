@@ -41,9 +41,11 @@
     scope.appendTo(document.querySelector("header"));
 
     let text2 = new Blotter.Text("DISTORTION Ø", {
-      family: "Pilowlava",
-      size: 220,
+      family: "fenwick-outline",
+      size: 420,
       fill: "black",
+
+      strokeText: 30,
     });
 
     let material2 = new Blotter.RollingDistortMaterial();
@@ -56,7 +58,7 @@
 
     material2.uniforms.uNoiseDistortVolatility.value = 8;
     material2.uniforms.uNoiseDistortAmplitude.value = 0.0152;
-    material2.uniforms.uDistortPosition.value = 0.04;
+    material2.uniforms.uDistortPosition.value = 0.5;
     material2.uniforms.uRotation.value = 18;
     material2.uniforms.uSpeed.value = 0.05;
 

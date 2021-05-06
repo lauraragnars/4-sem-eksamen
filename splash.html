@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Splash test</title>
+    <script src="blotter.min.js"></script>
+    <script src="liquidDistortMaterial.js"></script>
+    <script src="rollingDistortMaterial.js"></script>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      background: #4b17fd;
+      background-image: url(screenprintoverlay.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-blend-mode: overlay;
+
+      /* background: linear-gradient(353deg, #4b17fd, #fd17e0, #7817fd);
+      background-size: 600% 600%;
+      animation: AnimationName 21s ease infinite; */
+    }
+
+    /* .bg-photo {
+      background-image: url(screenprintoverlay.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      width: 100vw;
+      position: absolute;
+
+      mix-blend-mode: overlay;
+    } */
+
+    .text {
+      font-family: "Pilowlava";
+      color: white;
+      font-size: 150px;
+      margin-top: 350px;
+      text-align: center;
+      transform: scale(1, 5);
+    }
+
+    .text span {
+      display: inline-block;
+    }
+
+    header {
+      position: fixed;
+      left: 20px;
+      top: 10px;
+    }
+
+    .text span:nth-child(3n) {
+      filter: blur(4px);
+      animation-name: floating;
+      animation-duration: 15s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+
+    .text span:nth-child(2n) {
+      filter: blur(2px);
+      animation-name: floatingR;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-delay: 2s;
+    }
+
+    .text span:nth-child(1),
+    .text span:nth-child(5),
+    .text span:nth-child(7),
+    .text span:nth-child(11) {
+      filter: blur(1px);
+      animation-name: floating;
+      animation-duration: 12s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-delay: 1s;
+    }
+
+    @keyframes bgcolor {
+      0% {
+        background: #4b17fd;
+      }
+
+      30% {
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(9, 9, 121, 1) 33%,
+          rgba(0, 212, 255, 1) 100%
+        );
+      }
+
+      60% {
+        background: linear-gradient(
+          90deg,
+          rgba(36, 0, 25, 1) 0%,
+          rgba(121, 9, 101, 1) 27%,
+          rgba(0, 212, 255, 1) 100%
+        );
+      }
+
+      90% {
+        background: #f35;
+      }
+
+      100% {
+        background: #4b17fd;
+      }
+    }
+
+    @keyframes floating {
+      0% {
+        transform: translate(0, 0px);
+      }
+      50% {
+        transform: translate(0, 7px);
+      }
+      100% {
+        transform: translate(0, -0px);
+      }
+    }
+
+    @keyframes floatingR {
+      0% {
+        transform: translate(0, 0px);
+      }
+      50% {
+        transform: translate(0, -7px);
+      }
+      100% {
+        transform: translate(0, -0px);
+      }
+    }
+  </style>
+  <body>
+    <div class="bg-photo"></div>
+    <header></header>
+    <div class="text">
+      <span>D</span><span>I</span><span>S</span><span>T</span><span>O</span
+      ><span>R</span><span>T</span><span>I</span><span>O</span><span>N</span>
+      <span>Ø</span>
+    </div>
+  </body>
+  <script>
+    let text = new Blotter.Text("Ø", {
+      family: "Pilowlava",
+      size: 70,
+      fill: "white",
+    });
+
+    let material = new Blotter.LiquidDistortMaterial();
+
+    let blotter = new Blotter(material, { texts: text });
+
+    material.uniforms.uSpeed.value = 0.1;
+
+    material.uniforms.uVolatility.value = 0.1;
+
+    let scope = blotter.forText(text);
+
+    scope.appendTo(document.querySelector("header"));
+  </script>
+</html>
