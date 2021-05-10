@@ -7,6 +7,7 @@
     <script src="blotter.min.js"></script>
     <script src="liquidDistortMaterial.js"></script>
     <script src="rollingDistortMaterial.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/nay2vam.css" />
   </head>
   <style>
     body {
@@ -34,7 +35,9 @@
     } */
 
     .text {
-      font-family: "Pilowlava";
+      font-family: fenwick, sans-serif;
+      font-weight: 700;
+      font-style: normal;
       color: white;
       font-size: 120px;
       margin-top: 300px;
@@ -137,9 +140,10 @@
     <div class="bg-photo"></div>
     <header></header>
     <div class="text">
-      <span>D</span><span>I</span><span>S</span><span>T</span><span>O</span><span>R</span><span>T</span><span>I</span><span>O</span><span>N</span>
-      <span>Ø</span>
+      <!-- <span>D</span><span>i</span><span>s</span><span>t</span><span>o</span><span>r</span><span>t</span><span>i</span><span>o</span><span>n</span>
+      <span>Ø</span> -->
     </div>
+    <div id="main-title"></div>
   </body>
   <script>
     let text = new Blotter.Text("Ø", {
@@ -159,5 +163,69 @@
     let scope = blotter.forText(text);
 
     scope.appendTo(document.querySelector("header"));
+
+    // let text2 = new Blotter.Text("D", {
+    //   family: "fenwick",
+    //   size: 220,
+    //   weight: 700,
+    //   fill: "white",
+    // });
+
+    // let material2 = new Blotter.LiquidDistortMaterial();
+
+    // let blotter2 = new Blotter(material2, { texts: text2 });
+
+    // material2.uniforms.uSpeed.value = 0.1;
+
+    // material2.uniforms.uVolatility.value = 0.11;
+    // material2.uniforms.uSeed.value = 10.44;
+
+    // let scope2 = blotter2.forText(text2);
+
+    // scope2.appendTo(document.querySelector("#main-title"));
+
+    // let text3 = new Blotter.Text("i", {
+    //   family: "fenwick",
+    //   size: 220,
+    //   weight: 700,
+    //   fill: "white",
+    // });
+
+    // let material3 = new Blotter.LiquidDistortMaterial();
+
+    // let blotter3 = new Blotter(material3, { texts: text3 });
+
+    // material3.uniforms.uSpeed.value = 0.1;
+
+    // material3.uniforms.uVolatility.value = 0.11;
+    // material3.uniforms.uSeed.value = 10.44;
+
+    // let scope3 = blotter3.forText(text3);
+
+    // scope3.appendTo(document.querySelector("#main-title"));
+
+    let letters = ["D", "i", "s", "t", "o", "r", "t", "i", "o", "n", "Ø"];
+
+    letters.forEach((elm) => {
+      let text = new Blotter.Text(elm, {
+        family: "fenwick",
+        size: 220,
+        weight: 700,
+        fill: "white",
+        height: "",
+      });
+
+      let material = new Blotter.LiquidDistortMaterial();
+
+      let blotter = new Blotter(material, { texts: text });
+
+      material.uniforms.uSpeed.value = 0.1;
+      material.uniforms.uVolatility.value = 0.11;
+      material.uniforms.uSeed.value = 10.44;
+
+      let scope = blotter.forText(text);
+
+      scope.appendTo(document.querySelector("#main-title"));
+    });
   </script>
 </html>
