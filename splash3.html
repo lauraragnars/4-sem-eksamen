@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Splash test</title>
+    <script src="blotter.min.js"></script>
+    <script src="liquidDistortMaterial.js"></script>
+    <script src="rollingDistortMaterial.js"></script>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      background-color: #b29bff;
+      background-image: url(glitch.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-blend-mode: overlay;
+
+      /* background: linear-gradient(353deg, #4b17fd, #fd17e0, #7817fd);
+      background-size: 600% 600%;*/
+      /* animation: bgcolor 10s linear infinite; */
+    }
+
+    /* .bg-photo {
+      background-image: url(screenprintoverlay.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      width: 100vw;
+      position: absolute;
+
+      mix-blend-mode: overlay;
+    } */
+
+    .text {
+      font-family: "Pilowlava";
+      color: white;
+      font-size: 120px;
+      margin-top: 300px;
+      text-align: center;
+      /* mix-blend-mode: difference;
+      background-blend-mode: difference; */
+      transform: scale(1, 5);
+    }
+
+    #main-title {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .text span {
+      display: inline-block;
+      display: none;
+    }
+
+    header {
+      position: fixed;
+      left: 20px;
+      top: 10px;
+    }
+
+    .text span:nth-child(3n) {
+      filter: blur(4px);
+      animation-name: floating;
+      animation-duration: 15s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+
+    .text span:nth-child(2n) {
+      filter: blur(2px);
+      animation-name: floatingR;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-delay: 2s;
+    }
+
+    .text span:nth-child(1),
+    .text span:nth-child(5),
+    .text span:nth-child(7),
+    .text span:nth-child(11) {
+      filter: blur(1px);
+      animation-name: floating;
+      animation-duration: 12s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-delay: 1s;
+    }
+
+    @keyframes bgcolor {
+      0% {
+        background-color: #4b17fd;
+      }
+      /* 
+      25% {
+        background-color: #f2c0ff;
+      } */
+
+      33% {
+        background-color: #8d2981;
+      }
+
+      66% {
+        background-color: #835fff;
+      }
+
+      100% {
+        background-color: #4b17fd;
+      }
+    }
+    /* 
+    @keyframes floating {
+      0% {
+        transform: translate(0, 0px);
+        filter: blur(1px);
+      }
+      50% {
+        transform: translate(0, 7px);
+        filter: blur(5px);
+      }
+      100% {
+        transform: translate(0, -0px);
+        filter: blur(1px);
+      }
+    }
+
+    @keyframes floatingR {
+      0% {
+        transform: translate(0, 0px);
+        filter: blur(2px);
+      }
+      50% {
+        transform: translate(0, -7px);
+        filter: blur(7px);
+      }
+      100% {
+        transform: translate(0, -0px);
+        filter: blur(2px);
+      }
+    } */
+  </style>
+  <body>
+    <div class="bg-photo"></div>
+    <header></header>
+    <!-- <div class="text">
+      <span>D</span><span>I</span><span>S</span><span>T</span><span>O</span
+      ><span>R</span><span>T</span><span>I</span><span>O</span><span>N</span>
+      <span>Ø</span>
+    </div> -->
+    <div id="main-title"></div>
+  </body>
+  <script>
+    let text = new Blotter.Text("Ø", {
+      family: "Pilowlava",
+      size: 60,
+      fill: "blackf",
+    });
+
+    let material = new Blotter.LiquidDistortMaterial();
+
+    let blotter = new Blotter(material, { texts: text });
+
+    material.uniforms.uSpeed.value = 0.1;
+
+    material.uniforms.uVolatility.value = 0.1;
+
+    let scope = blotter.forText(text);
+
+    scope.appendTo(document.querySelector("header"));
+
+    // let text2 = new Blotter.Text("DISTORTION Ø", {
+    //   family: "heading now trial",
+    //   size: 800,
+    //   fill: "black",
+    // });
+
+    // let material2 = new Blotter.RollingDistortMaterial();
+
+    // let blotter2 = new Blotter(material2, { texts: text2 });
+
+    // material2.uniforms.uSineDistortSpread.value = 6.77;
+    // material2.uniforms.uSineDistortCycleCount.value = 1;
+    // material2.uniforms.uSineDistortAmplitude.value = 0;
+
+    // material2.uniforms.uNoiseDistortVolatility.value = 10;
+    // material2.uniforms.uNoiseDistortAmplitude.value = 0.08;
+    // material2.uniforms.uDistortPosition.value = 0.6;
+    // material2.uniforms.uRotation.value = 28;
+    // material2.uniforms.uSpeed.value = 0.03;
+
+    // let scope2 = blotter2.forText(text2);
+
+    // scope2.appendTo(document.querySelector("#main-title"));
+
+    let letters = ["D", "I", "S", "T", "O", "R", "T", "I", "O", "N", "Ø"];
+
+    letters.forEach((elm) => {
+      let text = new Blotter.Text(elm, {
+        family: "heading now trial",
+        size: 800,
+        fill: "black",
+      });
+
+      let material = new Blotter.RollingDistortMaterial();
+
+      let blotter = new Blotter(material, { texts: text });
+
+      material.uniforms.uSineDistortSpread.value = 0.025;
+      material.uniforms.uSineDistortCycleCount.value = 1.5;
+      material.uniforms.uSineDistortAmplitude.value = 0;
+
+      material.uniforms.uNoiseDistortVolatility.value = 10;
+      material.uniforms.uNoiseDistortAmplitude.value = 0.8;
+      material.uniforms.uDistortPosition.value = 0.6;
+      material.uniforms.uRotation.value = 28;
+      material.uniforms.uSpeed.value = 0.03;
+
+      let scope = blotter.forText(text);
+
+      scope.appendTo(document.querySelector("#main-title"));
+    });
+  </script>
+</html>

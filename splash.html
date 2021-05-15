@@ -11,15 +11,15 @@
   <style>
     body {
       margin: 0;
-      background: #4b17fd;
-      background-image: url(screenprintoverlay.jpeg);
+      background-color: #b29bff;
+      background-image: url(glitch.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       background-blend-mode: overlay;
 
       /* background: linear-gradient(353deg, #4b17fd, #fd17e0, #7817fd);
-      background-size: 600% 600%;
-      animation: AnimationName 21s ease infinite; */
+      background-size: 600% 600%;*/
+      /* animation: bgcolor 10s linear infinite; */
     }
 
     /* .bg-photo {
@@ -39,11 +39,24 @@
       font-size: 120px;
       margin-top: 300px;
       text-align: center;
+      /* mix-blend-mode: difference;
+      background-blend-mode: difference; */
       transform: scale(1, 5);
+    }
+
+    #main-title {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .b-canvas {
+      background-blend-mode: difference;
+      width: 90vw;
     }
 
     .text span {
       display: inline-block;
+      display: none;
     }
 
     header {
@@ -83,26 +96,26 @@
 
     @keyframes bgcolor {
       0% {
-        background: #4b17fd;
+        background-color: #4b17fd;
+      }
+      /* 
+      25% {
+        background-color: #f2c0ff;
+      } */
+
+      33% {
+        background-color: #8d2981;
       }
 
-      30% {
-        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 33%, rgba(0, 212, 255, 1) 100%);
-      }
-
-      60% {
-        background: linear-gradient(90deg, rgba(36, 0, 25, 1) 0%, rgba(121, 9, 101, 1) 27%, rgba(0, 212, 255, 1) 100%);
-      }
-
-      90% {
-        background: #f35;
+      66% {
+        background-color: #835fff;
       }
 
       100% {
-        background: #4b17fd;
+        background-color: #4b17fd;
       }
     }
-
+    /* 
     @keyframes floating {
       0% {
         transform: translate(0, 0px);
@@ -131,21 +144,23 @@
         transform: translate(0, -0px);
         filter: blur(2px);
       }
-    }
+    } */
   </style>
   <body>
     <div class="bg-photo"></div>
     <header></header>
-    <div class="text">
-      <span>D</span><span>I</span><span>S</span><span>T</span><span>O</span><span>R</span><span>T</span><span>I</span><span>O</span><span>N</span>
+    <!-- <div class="text">
+      <span>D</span><span>I</span><span>S</span><span>T</span><span>O</span
+      ><span>R</span><span>T</span><span>I</span><span>O</span><span>N</span>
       <span>Ø</span>
-    </div>
+    </div> -->
+    <div id="main-title"></div>
   </body>
   <script>
     let text = new Blotter.Text("Ø", {
       family: "Pilowlava",
-      size: 70,
-      fill: "white",
+      size: 60,
+      fill: "blackf",
     });
 
     let material = new Blotter.LiquidDistortMaterial();
@@ -159,5 +174,29 @@
     let scope = blotter.forText(text);
 
     scope.appendTo(document.querySelector("header"));
+
+    let text2 = new Blotter.Text("DISTORTION Ø", {
+      family: "le murmure",
+      size: 600,
+      fill: "#212121",
+    });
+
+    let material2 = new Blotter.RollingDistortMaterial();
+
+    let blotter2 = new Blotter(material2, { texts: text2 });
+
+    material2.uniforms.uSineDistortSpread.value = 3.77;
+    material2.uniforms.uSineDistortCycleCount.value = 1;
+    material2.uniforms.uSineDistortAmplitude.value = 0;
+
+    material2.uniforms.uNoiseDistortVolatility.value = 5;
+    material2.uniforms.uNoiseDistortAmplitude.value = 0.08;
+    material2.uniforms.uDistortPosition.value = 0.6;
+    material2.uniforms.uRotation.value = 90;
+    material2.uniforms.uSpeed.value = 0.02;
+
+    let scope2 = blotter2.forText(text2);
+
+    scope2.appendTo(document.querySelector("#main-title"));
   </script>
 </html>
