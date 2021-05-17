@@ -21,5 +21,8 @@
   "homepage": "https://github.com/lauraragnars/4-sem-eksamen#readme",
   "devDependencies": {
     "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "contentful": "^8.3.5"
   }
 }
