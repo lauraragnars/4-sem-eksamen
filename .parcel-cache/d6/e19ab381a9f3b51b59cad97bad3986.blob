@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "pilowlavaa";
+  src: url("Pilowlava-Regular.HASH_REF_64428cd3d61c828e5d4f3a2a98d2a764.woff2") format("woff2"), url("Pilowlava-Regular.HASH_REF_921646b1c182119e729a538a3035b012.woff") format("woff");
+}
+/*# sourceMappingURL=index.HASH_REF_62e29be6db72205ee17af4d6088b44af.css.map */

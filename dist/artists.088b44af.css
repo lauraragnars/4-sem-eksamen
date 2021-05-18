@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+@font-face {
+  font-family: "pilowlavaa";
+  src: url("Pilowlava-Regular.98d2a764.woff2") format("woff2"), url("Pilowlava-Regular.3035b012.woff") format("woff");
+}
+/*# sourceMappingURL=artists.088b44af.css.map */

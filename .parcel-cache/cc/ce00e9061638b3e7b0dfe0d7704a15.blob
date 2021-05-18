@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+@font-face {
+  font-family: "pilowlavaa";
+  src: url("/fonts/Pilowlava-Regular.woff2") format("woff2"), url("/fonts/Pilowlava-Regular.woff") format("woff");
+}

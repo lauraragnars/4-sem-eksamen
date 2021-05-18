@@ -1,0 +1,41 @@
+@import "../base/variables";
+
+#index-body {
+  background-color: $color-background-1;
+  background-image: url("/background_images/glitch_6.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+
+#program-body {
+  background-color: $color-background-2;
+  background-image: url("/background_images/glitch_13.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+
+#merch-body {
+  background-color: $color-background-3;
+}
+
+#practical-info-body {
+  background-color: $color-background-4;
+}
+
+#artists-body {
+  background-color: $color-background-5;
+  background-image: url("/background_images/glitch_1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+
+#tickets-body {
+  background-color: $color-background-6;
+}
+
+#map-body {
+  background-color: $color-background-7;
+}

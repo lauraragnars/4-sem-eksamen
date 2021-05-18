@@ -1,13 +1,13 @@
 {
   "name": "distortion",
   "version": "1.0.0",
-  "description": "",
+  "description": "https://quirky-benz-58faf7.netlify.app",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel *.html",
     "deletedist": "rm -rf ./dist/*",
-    "build": "parcel build *.html --public-url ./"
+    "start": "parcel serve ./src/index.html",
+    "build": "parcel build ./src/index.html"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/lauraragnars/4-sem-eksamen#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.10.3"
+    "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "parcel": "^2.0.0-beta.2"
   }
 }

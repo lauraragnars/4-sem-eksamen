@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+@font-face {
+  font-family: "pilowlavaa";
+  src: url("3b9ab7a2452de0a92f5eb34408c8e7b3") format("woff2"), url("cc16c6ced2f92af38964ac333cc95765") format("woff");
+}
