@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/lauraragnars/4-sem-eksamen#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.5"
+    "parcel-bundler": "^1.10.3"
   }
 }
