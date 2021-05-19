@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+@font-face {
+  font-family: "pilowlavaa";
+  src: url("/fonts/Pilowlava-Regular.woff2") format("woff2"), url("/fonts/Pilowlava-Regular.woff") format("woff");
+}
+.burger-menu-svg {
+  width: 4rem;
+  position: fixed;
+  right: 1.5rem;
+  top: 1.5rem;
+  mix-blend-mode: difference;
+  transition: all 0.3s ease-out;
+}
+
+header .open .burger-menu-svg {
+  width: 180vw;
+  top: -100vh;
+  right: -40vw;
+  transition: all 0.3s ease-in;
+  fill: #f2c0ff;
+  mix-blend-mode: normal;
+}
+
+header .open #blob-9 {
+  fill: #f2c0ff;
+  mix-blend-mode: normal;
+}
+
+header .open .burger-menu-text {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.burger-menu-text {
+  font-family: fenwick, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: fixed;
+  right: 2.3rem;
+  top: 3.3rem;
+  font-size: 0.7rem;
+  transition: 0.3s;
+}
+
+.burger-menu {
+  cursor: pointer;
+}
+
+.header-logo {
+  background-blend-mode: difference;
+  position: fixed;
+  top: 1rem;
+  left: 1.5rem;
+}
+
+body {
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+
+#index-body {
+  background-color: #8000ff;
+  background-image: url("/background_images/glitch_6_c.jpg");
+}
+
+#program-body {
+  background-color: #7979ff;
+  background-image: url("/background_images/glitch_13.jpg");
+}
+
+#merch-body {
+  background-color: #835fff;
+}
+
+#practical-info-body {
+  background-color: #4a53e8;
+}
+
+#artists-body {
+  background-color: #b29bff;
+  background-image: url("/background_images/glitch_1.jpg");
+}
+
+#tickets-body {
+  background-color: #f2c0ff;
+}
+
+#map-body {
+  background-color: #835fff;
+}
