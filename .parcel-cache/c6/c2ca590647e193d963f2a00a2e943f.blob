@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" id="index-body">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="blotter.min.js"></script> -->
+    <script crossorigin="" src="f344cc1dc8b71c9d251300701530d8bb"></script>
+
+    <script src="10a942fae94e371af333810febfb13fb"></script>
+    <link rel="stylesheet" href="f4f8522cb2d66414de6407aacbcbc207">
+    <link rel="stylesheet" href="b33b9dd6dbbf7b10d7bb74d0a42caf12">
+    <title>Distortion Ø</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-logo"></div>
+      <div class="burger-menu">
+        <img class="burger-menu-svg" src="e10563fb36d9c09de5dd30e2cf84ab5a" alt="Burger menu icon">
+        <h3 class="burger-menu-text">Menu</h3>
+      </div>
+    </header>
+  </body>
+  <script src="67e2e1d839de85b19f58d77aecf7b303"></script>
+  <script src="d26b03374973c7a2a151878b2e21a00f"></script>
+</html>

@@ -1,0 +1,76 @@
+@import "../base/variables";
+
+.burger-menu-svg {
+  width: 4rem;
+  position: fixed;
+  right: 1.5rem;
+  top: 1.5rem;
+  mix-blend-mode: difference;
+  transition: all 0.3s ease-out;
+  //animation: blobAni 15s linear infinite;
+}
+
+header .open .burger-menu-svg {
+  width: 180vw;
+  top: -100vh;
+  right: -40vw;
+  transition: all 0.3s ease-in;
+  fill: $light-pink;
+  mix-blend-mode: normal;
+}
+
+header .open #blob-9 {
+  fill: $light-pink;
+  mix-blend-mode: normal;
+}
+
+header .open .burger-menu-text {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.burger-menu-text {
+  font-family: fenwick, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: fixed;
+  right: 2.3rem;
+  top: 3.3rem;
+  font-size: 0.7rem;
+  transition: 0.3s;
+}
+
+.burger-menu {
+  cursor: pointer;
+}
+
+.header-logo {
+  background-blend-mode: difference;
+  position: fixed;
+  top: 1rem;
+  left: 1.5rem;
+}
+
+// @keyframes blobAni {
+//   0% {
+//     // transform: scale(1);
+//     transform: rotate(0deg);
+//   }
+
+//   //   25% {
+//   //     transform: scale(1.2);
+//   //   }
+
+//   //   50% {
+//   //     transform: scale(1.4);
+//   //   }
+
+//   //   75% {
+//   //     transform: scale(1.2);
+//   //   }
+
+//   100% {
+//     // transform: scale(1);
+//     transform: rotate(360deg);
+//   }
+// }

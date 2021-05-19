@@ -26,6 +26,20 @@ img {
   font-family: "pilowlavaa";
   src: url("/fonts/Pilowlava-Regular.woff2") format("woff2"), url("/fonts/Pilowlava-Regular.woff") format("woff");
 }
+.burger-menu img {
+  width: 4rem;
+  position: fixed;
+  right: 1.5rem;
+  top: 1.5rem;
+  mix-blend-mode: difference;
+}
+
+.burger-menu-text {
+  font-family: fenwick, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 #index-body {
   background-color: #8000ff;
   background-image: url("/background_images/glitch_6.jpg");
