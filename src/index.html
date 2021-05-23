@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <script src="blotter.min.js"></script> -->
     <script
       crossorigin
       src="https://raw.githack.com/bradley/Blotter/master/build/blotter.min.js"
     ></script>
-
     <script src="https://raw.githack.com/bradley/Blotter/master/build/materials/liquidDistortMaterial.js"></script>
+    <script src="https://raw.githack.com/bradley/Blotter/master/build/materials/rollingDistortMaterial.js"></script>
+
     <link rel="stylesheet" href="https://use.typekit.net/sxe1kwu.css" />
     <link rel="stylesheet" href="../sass/main.scss" />
     <title>Distortion Ø</title>
@@ -25,9 +25,56 @@
           alt="Burger menu icon"
         />
         <h3 class="burger-menu-text">Menu</h3>
+        <nav class="burger-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="artists.html">Artists</a></li>
+            <li><a href="tickets.html">Tickets</a></li>
+            <li><a href="program.html">Program</a></li>
+            <li><a href="merch.html">Merch</a></li>
+            <li><a href="practical-info.html">Practical Info</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
+
+    <main>
+      <div class="splash-text"></div>
+    </main>
+
+    <footer>
+      <img
+        class="footer-blob"
+        src="/assets/footer_blob.svg"
+        alt="Footer blob shape"
+      />
+    </footer>
   </body>
   <script src="main.js"></script>
   <script src="index.js"></script>
+
+  <script>
+    animateText();
+    function animateText() {
+      const elem = document.querySelector(".splash-text");
+      const text = new Blotter.Text("DISTORTION Ø", {
+        family: "PP Pangram Sans Rounded",
+        weight: 600,
+        size: 200,
+        fill: "white",
+      });
+
+      let material = new Blotter.RollingDistortMaterial();
+
+      material.uniforms.uSineDistortAmplitude.value = 0.04;
+
+      let blotter = new Blotter(material, {
+        texts: text,
+      });
+
+      let scope = blotter.forText(text);
+
+      scope.appendTo(elem);
+    }
+  </script>
 </html>

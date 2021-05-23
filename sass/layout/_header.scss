@@ -10,23 +10,44 @@
   //animation: blobAni 15s linear infinite;
 }
 
-header .open .burger-menu-svg {
-  width: 180vw;
-  top: -100vh;
-  right: -40vw;
-  transition: all 0.3s ease-in;
-  fill: $light-pink;
-  mix-blend-mode: normal;
+.burger-nav {
+  position: fixed;
+  a {
+    display: none;
+    text-decoration: none;
+    color: black;
+    font-family: fenwick, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 6rem;
+    letter-spacing: 1px;
+  }
 }
 
-header .open #blob-9 {
-  fill: $light-pink;
-  mix-blend-mode: normal;
-}
+// styles that are only applied when burge menu is open
+header .open {
+  #blob-9 {
+    fill: $light-pink;
+    mix-blend-mode: normal;
+  }
 
-header .open .burger-menu-text {
-  opacity: 0;
-  transition: 0.3s;
+  .burger-menu-text {
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  .burger-menu-svg {
+    width: 180vw;
+    top: -100vh;
+    right: -40vw;
+    transition: all 0.3s ease-in;
+    fill: $light-pink;
+    mix-blend-mode: normal;
+  }
+
+  .burger-nav a {
+    display: block;
+  }
 }
 
 .burger-menu-text {

@@ -36,13 +36,19 @@ img {
   transition: all 0.3s ease-out;
 }
 
-header .open .burger-menu-svg {
-  width: 180vw;
-  top: -100vh;
-  right: -40vw;
-  transition: all 0.3s ease-in;
-  fill: #f2c0ff;
-  mix-blend-mode: normal;
+.burger-nav {
+  position: fixed;
+}
+
+.burger-nav a {
+  display: none;
+  text-decoration: none;
+  color: black;
+  font-family: fenwick, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 6rem;
+  letter-spacing: 1px;
 }
 
 header .open #blob-9 {
@@ -53,6 +59,19 @@ header .open #blob-9 {
 header .open .burger-menu-text {
   opacity: 0;
   transition: 0.3s;
+}
+
+header .open .burger-menu-svg {
+  width: 180vw;
+  top: -100vh;
+  right: -40vw;
+  transition: all 0.3s ease-in;
+  fill: #f2c0ff;
+  mix-blend-mode: normal;
+}
+
+header .open .burger-nav a {
+  display: block;
 }
 
 .burger-menu-text {
@@ -77,11 +96,24 @@ header .open .burger-menu-text {
   left: 1.5rem;
 }
 
+footer {
+  margin: 0;
+  padding: 0;
+}
+
+footer .footer-blob {
+  position: absolute;
+  bottom: -10vw;
+  width: 150vw;
+  left: -30vw;
+}
+
 body {
   min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
+  overflow: hidden;
 }
 
 #index-body {
@@ -113,4 +145,9 @@ body {
 
 #map-body {
   background-color: #835fff;
+}
+
+.splash-text {
+  text-align: center;
+  margin-top: 150px;
 }
