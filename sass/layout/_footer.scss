@@ -1,24 +1,19 @@
 footer {
-  margin: 0;
-  padding: 0;
-  position: relative;
-
-  .footer-blob {
-    position: absolute;
-    width: 150vw;
-    left: -30vw;
-    bottom: -35vw;
-  }
-
-  .footer-content {
-    z-index: 4;
-    position: absolute;
-    bottom: 0;
-  }
+  width: 100vw;
+  height: 280px;
+  position: absolute;
+  bottom: 0;
+  background-image: url("/assets/footer_blob.svg");
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position-x: center;
 
   .footer-logo {
+    position: relative;
+    bottom: -60px;
+    left: 60px;
     img {
-      width: 150px;
+      width: 100px;
     }
   }
 }

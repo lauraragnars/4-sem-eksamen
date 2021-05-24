@@ -141,26 +141,24 @@ header .open .burger-nav a {
 }
 
 footer {
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
-footer .footer-blob {
-  position: absolute;
-  width: 150vw;
-  left: -30vw;
-  bottom: -35vw;
-}
-
-footer .footer-content {
-  z-index: 4;
+  width: 100vw;
+  height: 280px;
   position: absolute;
   bottom: 0;
+  background-image: url("e8bde7e860739d11aad6a87de8447d32");
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position-x: center;
+}
+
+footer .footer-logo {
+  position: relative;
+  bottom: -60px;
+  left: 60px;
 }
 
 footer .footer-logo img {
-  width: 150px;
+  width: 100px;
 }
 
 body {
