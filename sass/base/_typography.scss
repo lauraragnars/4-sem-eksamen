@@ -1,10 +1,11 @@
 @font-face {
-  font-family: "pilowlavaa";
-  src: url("/fonts/Pilowlava-Regular.woff2") format("woff2"),
-    url("/fonts/Pilowlava-Regular.woff") format("woff");
+  font-family: "pilowlava-regular";
+  src: url("/fonts/Pilowlava-Regular.woff2") format("woff2"), url("/fonts/Pilowlava-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
 }
 
-// Fenwick Regular
+/* // Fenwick Regular
 
 // font-family: fenwick, sans-serif;
 // font-weight: 400;
@@ -38,4 +39,4 @@
 
 // font-family: fenwick, sans-serif;
 // font-weight: 700;
-// font-style: italic;
+// font-style: italic; */

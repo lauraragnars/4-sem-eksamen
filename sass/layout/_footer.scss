@@ -1,0 +1,24 @@
+footer {
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  .footer-blob {
+    position: absolute;
+    width: 150vw;
+    left: -30vw;
+    bottom: -35vw;
+  }
+
+  .footer-content {
+    z-index: 4;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .footer-logo {
+    img {
+      width: 150px;
+    }
+  }
+}

@@ -1,32 +1,69 @@
 @import "../base/variables";
 
 .burger-menu-svg {
+  mix-blend-mode: difference;
   width: 4rem;
   position: fixed;
   right: 1.5rem;
   top: 1.5rem;
-  mix-blend-mode: difference;
-  transition: all 0.3s ease-out;
-  //animation: blobAni 15s linear infinite;
+  transition: 0.3s ease-out;
+  z-index: 3;
 }
 
-header .open .burger-menu-svg {
-  width: 180vw;
-  top: -100vh;
-  right: -40vw;
-  transition: all 0.3s ease-in;
-  fill: $light-pink;
-  mix-blend-mode: normal;
-}
-
-header .open #blob-9 {
-  fill: $light-pink;
-  mix-blend-mode: normal;
-}
-
-header .open .burger-menu-text {
+.burger-nav {
+  position: fixed;
+  z-index: 2;
+  transition: all 0.3s;
+  background-color: $light-pink;
   opacity: 0;
-  transition: 0.3s;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+
+  a {
+    display: none;
+    text-decoration: none;
+    color: white;
+    font-family: fenwick, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+
+    transition: 0.3s;
+    display: inline-block;
+
+    &:hover {
+      color: black;
+      transition: 0.3s;
+    }
+  }
+}
+
+// styles that are only applied when burge menu is open
+header .open {
+  // .burger-menu-text {
+  //   opacity: 0;
+  //   transition: 0.3s;
+  // }
+
+  // .burger-menu-svg {
+  //   width: 180vw;
+  //   top: -100vh;
+  //   right: -40vw;
+  //   transition: all 0.3s ease-in;
+  //   mix-blend-mode: normal;
+  // }
+
+  .burger-nav {
+    opacity: 1;
+    pointer-events: all;
+    transition: all 0.3s;
+    a {
+      display: block;
+    }
+  }
 }
 
 .burger-menu-text {
@@ -36,11 +73,14 @@ header .open .burger-menu-text {
   position: fixed;
   right: 2.3rem;
   top: 3.3rem;
+  z-index: 4;
   font-size: 0.7rem;
   transition: 0.3s;
+  color: white;
+  mix-blend-mode: difference;
 }
 
-.burger-menu {
+.burger-menu-icon {
   cursor: pointer;
 }
 
@@ -50,27 +90,3 @@ header .open .burger-menu-text {
   top: 1rem;
   left: 1.5rem;
 }
-
-// @keyframes blobAni {
-//   0% {
-//     // transform: scale(1);
-//     transform: rotate(0deg);
-//   }
-
-//   //   25% {
-//   //     transform: scale(1.2);
-//   //   }
-
-//   //   50% {
-//   //     transform: scale(1.4);
-//   //   }
-
-//   //   75% {
-//   //     transform: scale(1.2);
-//   //   }
-
-//   100% {
-//     // transform: scale(1);
-//     transform: rotate(360deg);
-//   }
-// }
