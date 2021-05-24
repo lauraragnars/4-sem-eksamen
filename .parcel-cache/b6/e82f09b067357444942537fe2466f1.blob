@@ -23,13 +23,6 @@ img {
 }
 
 @font-face {
-<<<<<<< HEAD
-  font-family: "pilowlavaa";
-  src: url("3b9ab7a2452de0a92f5eb34408c8e7b3") format("woff2"), url("cc16c6ced2f92af38964ac333cc95765") format("woff");
-}
-
-.burger-menu-svg {
-=======
   font-family: "pilowlava-regular";
   src: url("3b9ab7a2452de0a92f5eb34408c8e7b3") format("woff2"), url("cc16c6ced2f92af38964ac333cc95765") format("woff");
   font-style: normal;
@@ -74,36 +67,10 @@ img {
 
 .burger-menu-svg {
   mix-blend-mode: difference;
->>>>>>> header-footer
   width: 4rem;
   position: fixed;
   right: 1.5rem;
   top: 1.5rem;
-<<<<<<< HEAD
-  mix-blend-mode: difference;
-  transition: all 0.3s ease-out;
-}
-
-header .open .burger-menu-svg {
-  width: 180vw;
-  top: -100vh;
-  right: -40vw;
-  transition: all 0.3s ease-in;
-  fill: #f2c0ff;
-  mix-blend-mode: normal;
-}
-
-header .open #blob-9 {
-  fill: #f2c0ff;
-  mix-blend-mode: normal;
-}
-
-header .open .burger-menu-text {
-  opacity: 0;
-  transition: 0.3s;
-}
-
-=======
   transition: 0.3s ease-out;
   z-index: 3;
 }
@@ -148,7 +115,6 @@ header .open .burger-nav a {
   display: block;
 }
 
->>>>>>> header-footer
 .burger-menu-text {
   font-family: fenwick, sans-serif;
   font-weight: 400;
@@ -156,13 +122,6 @@ header .open .burger-nav a {
   position: fixed;
   right: 2.3rem;
   top: 3.3rem;
-<<<<<<< HEAD
-  font-size: 0.7rem;
-  transition: 0.3s;
-}
-
-.burger-menu {
-=======
   z-index: 4;
   font-size: 0.7rem;
   transition: 0.3s;
@@ -171,7 +130,6 @@ header .open .burger-nav a {
 }
 
 .burger-menu-icon {
->>>>>>> header-footer
   cursor: pointer;
 }
 
@@ -182,8 +140,6 @@ header .open .burger-nav a {
   left: 1.5rem;
 }
 
-<<<<<<< HEAD
-=======
 footer {
   margin: 0;
   padding: 0;
@@ -207,16 +163,12 @@ footer .footer-logo img {
   width: 150px;
 }
 
->>>>>>> header-footer
 body {
   min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
-<<<<<<< HEAD
-=======
-  overflow: hidden;
->>>>>>> header-footer
+  overflow-x: hidden;
 }
 
 #index-body {
@@ -248,12 +200,9 @@ body {
 
 #map-body {
   background-color: #835fff;
-<<<<<<< HEAD
-=======
 }
 
 .splash-text {
   text-align: center;
   margin-top: 150px;
->>>>>>> header-footer
 }

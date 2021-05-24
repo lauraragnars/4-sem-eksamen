@@ -34,7 +34,7 @@ function animateText() {
   const text = new Blotter.Text("DISTORTION Ø", {
     family: "pilowlava-regular",
     weight: 100,
-    size: 100,
+    size: 150,
     fill: "white",
   });
 
