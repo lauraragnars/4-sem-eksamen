@@ -6,12 +6,14 @@
   right: 1.5rem;
   top: 1.5rem;
   mix-blend-mode: difference;
-  transition: all 0.3s ease-out;
-  //animation: blobAni 15s linear infinite;
+  background-blend-mode: difference;
+  transition: 0.3s ease-out;
+  z-index: 3;
 }
 
 .burger-nav {
   position: fixed;
+  z-index: 4;
   a {
     display: none;
     text-decoration: none;
@@ -19,18 +21,13 @@
     font-family: fenwick, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 6rem;
+    font-size: 3rem;
     letter-spacing: 1px;
   }
 }
 
 // styles that are only applied when burge menu is open
 header .open {
-  #blob-9 {
-    fill: $light-pink;
-    mix-blend-mode: normal;
-  }
-
   .burger-menu-text {
     opacity: 0;
     transition: 0.3s;
@@ -41,8 +38,6 @@ header .open {
     top: -100vh;
     right: -40vw;
     transition: all 0.3s ease-in;
-    fill: $light-pink;
-    mix-blend-mode: normal;
   }
 
   .burger-nav a {
@@ -57,6 +52,7 @@ header .open {
   position: fixed;
   right: 2.3rem;
   top: 3.3rem;
+  z-index: 4;
   font-size: 0.7rem;
   transition: 0.3s;
 }
@@ -71,27 +67,3 @@ header .open {
   top: 1rem;
   left: 1.5rem;
 }
-
-// @keyframes blobAni {
-//   0% {
-//     // transform: scale(1);
-//     transform: rotate(0deg);
-//   }
-
-//   //   25% {
-//   //     transform: scale(1.2);
-//   //   }
-
-//   //   50% {
-//   //     transform: scale(1.4);
-//   //   }
-
-//   //   75% {
-//   //     transform: scale(1.2);
-//   //   }
-
-//   100% {
-//     // transform: scale(1);
-//     transform: rotate(360deg);
-//   }
-// }
