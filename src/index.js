@@ -13,7 +13,7 @@ function start() {
   // show data at load
   loadJSON(link, showData);
 
-  animateText();
+  // animateText();
 }
 
 // loads data
@@ -29,24 +29,28 @@ function showData(data) {
   console.log(data);
 }
 
-function animateText() {
-  const elem = document.querySelector(".splash-text");
-  const text = new Blotter.Text("DISTORTION Ø", {
-    family: "pilowlava-regular",
-    weight: 100,
-    size: 150,
-    fill: "white",
-  });
+// function animateText() {
+document.fonts.ready.then(
+  function () {
+    const elem = document.querySelector(".splash-text");
+    const text = new Blotter.Text("DISTORTION Ø", {
+      family: "pilowlava-regular",
+      weight: 100,
+      size: 150,
+      fill: "white",
+    });
 
-  let material = new Blotter.RollingDistortMaterial();
+    let material = new Blotter.RollingDistortMaterial();
 
-  material.uniforms.uSineDistortAmplitude.value = 0.04;
+    material.uniforms.uSineDistortAmplitude.value = 0.04;
 
-  let blotter = new Blotter(material, {
-    texts: text,
-  });
+    let blotter = new Blotter(material, {
+      texts: text,
+    });
 
-  let scope = blotter.forText(text);
+    let scope = blotter.forText(text);
 
-  scope.appendTo(elem);
-}
+    scope.appendTo(elem);
+  }.bind(this)
+);
+// }

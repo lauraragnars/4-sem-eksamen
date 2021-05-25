@@ -1,0 +1,15 @@
+#index-body {
+  .splash-text {
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
+  }
+
+  .pink-banner {
+    background-image: url("/assets/pink_banner.svg");
+    width: 100vw;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

@@ -94,7 +94,6 @@ img {
   font-style: normal;
   font-size: 3rem;
   transition: 0.3s;
-  display: inline-block;
 }
 .burger-nav a:hover {
   color: black;
@@ -138,8 +137,6 @@ header .open .burger-nav a {
 footer {
   width: 100vw;
   height: 280px;
-  position: absolute;
-  bottom: 0;
   background-image: url("/assets/footer_blob.svg");
   background-repeat: no-repeat;
   background-size: 150%;
@@ -193,7 +190,15 @@ body {
   background-color: #835fff;
 }
 
-.splash-text {
+#index-body .splash-text {
   text-align: center;
   margin-top: 150px;
+  margin-bottom: 150px;
+}
+#index-body .pink-banner {
+  background-image: url("/assets/pink_banner.svg");
+  width: 100vw;
+  height: 450px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
