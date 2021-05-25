@@ -150,6 +150,17 @@ body {
   background-color: #835fff;
 }
 
+.button {
+  font-family: fenwick, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  background-color: black;
+  padding: 10px 20px;
+  font-size: 0.7rem;
+  text-decoration: none;
+}
+
 * {
   cursor: none;
 }
