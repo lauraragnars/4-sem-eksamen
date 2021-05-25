@@ -27,11 +27,19 @@ function loadJSON(url, callback) {
 
 function showData(data) {
   console.log(data);
+
+  document.querySelector(".about-text-header").textContent = data.fields.aboutHeader;
+  document.querySelector(".about-text").textContent = data.fields.aboutText;
 }
 
 // function animateText() {
 document.fonts.ready.then(
   function () {
+    let fontFaceSet = document.fonts;
+    console.log(fontFaceSet);
+
+    console.log("blotter ready");
+
     const elem = document.querySelector(".splash-text");
     const text = new Blotter.Text("DISTORTION Ø", {
       family: "pilowlava-regular",
