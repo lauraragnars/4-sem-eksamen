@@ -19,7 +19,7 @@
     background-color: white;
     padding: 100px 0;
     width: 100vw;
-    height: 50px;
+    height: auto;
   }
 
   .button-container {
@@ -39,5 +39,20 @@
   button:active {
     background-color: black;
     color: white;
+  }
+
+  #all-artists {
+    text-align: center;
+    margin: 50px 0;
+    li {
+      font-family: fenwick, sans-serif;
+      font-size: 3rem;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .headliner {
+      font-size: 4rem;
+    }
   }
 }
