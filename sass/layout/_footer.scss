@@ -1,6 +1,6 @@
 footer {
   width: 100vw;
-  height: 280px;
+  height: 330px;
   background-image: url("/assets/footer_blob.svg");
   background-repeat: no-repeat;
   background-size: 150%;
@@ -8,10 +8,10 @@ footer {
 
   .footer-logo {
     position: relative;
-    bottom: -60px;
-    left: 60px;
+    bottom: -180px;
+    left: 40px;
     img {
-      width: 100px;
+      width: 90px;
     }
   }
 }

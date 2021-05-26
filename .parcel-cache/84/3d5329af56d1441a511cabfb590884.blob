@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img,
+video {
+  width: 100%;
+}
+
+.burger-menu-svg {
+  mix-blend-mode: difference;
+  width: 4rem;
+  position: fixed;
+  right: 1.5rem;
+  top: 1.5rem;
+  transition: 0.3s ease-out;
+  z-index: 3;
+}
+
+.burger-nav {
+  position: fixed;
+  z-index: 2;
+  transition: all 0.3s;
+  background-color: #f2c0ff;
+  opacity: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.burger-nav li {
+  display: block;
+}
+
+.burger-nav a {
+  display: none;
+  text-decoration: none;
+  color: white;
+  font-family: fenwick, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.burger-nav a:hover {
+  color: black;
+  transition: 0.3s;
+}
+
+header .open .burger-nav {
+  opacity: 1;
+  pointer-events: all;
+  transition: all 0.3s;
+}
+
+.burger-menu-text {
+  font-family: fenwick, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: fixed;
+  right: 2.3rem;
+  top: 3.3rem;
+  z-index: 4;
+  font-size: 0.7rem;
+  transition: 0.3s;
+  color: white;
+  mix-blend-mode: difference;
+}
+
+.burger-menu-icon {
+  cursor: pointer;
+}
+
+.header-logo {
+  background-blend-mode: difference;
+  position: fixed;
+  top: 1rem;
+  left: 1.5rem;
+}
+
+footer {
+  width: 100vw;
+  height: 330px;
+  background-image: url("footer_blob.HASH_REF_45ee5353450ff4c4309c83977c05421b.svg");
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position-x: center;
+}
+
+footer .footer-logo {
+  position: relative;
+  bottom: -180px;
+  left: 40px;
+}
+
+footer .footer-logo img {
+  width: 90px;
+}
+
+body {
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  overflow-x: hidden;
+}
+
+#index-body {
+  background-color: #8000ff;
+  background-image: url("glitch_6_c.HASH_REF_72930cfeb98492566dbe96a64025a1d5.jpg");
+}
+
+#program-body {
+  background-color: #7979ff;
+  background-image: url("glitch_13.HASH_REF_47ebd2abec2d3e71907a429f1d7b54bb.jpg");
+}
+
+#merch-body {
+  background-color: #835fff;
+}
+
+#practical-info-body {
+  background-color: #4a53e8;
+}
+
+#artists-body {
+  background-color: #b29bff;
+  background-image: url("glitch_1.HASH_REF_514c06d7cc7f7caee4dd74206320c440.png");
+}
+
+#tickets-body {
+  background-color: #f2c0ff;
+}
+
+#map-body {
+  background-color: #835fff;
+}
+
+.section-wrapper {
+  width: 70vw;
+  margin-left: 15vw;
+}
+
+h1 {
+  font-family: fenwick, sans-serif;
+  font-size: 5rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.button {
+  font-family: fenwick, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  background-color: black;
+  padding: 12px 22px;
+  font-size: 0.7rem;
+  text-decoration: none;
+}
+
+* {
+  cursor: none;
+}
+
+.custom-cursor--link {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.custom-cursor--biglink {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.custom-cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: white;
+  z-index: 8;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transition: transform 0.15s ease-in-out;
+}
+
+#index-body .splash-text {
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+#index-body .pink-banner {
+  background-image: url("pink_banner.HASH_REF_a582ead8886c51dfc4dd23a74d133f2b.svg");
+  width: 100vw;
+  height: 450px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#index-body .video-section {
+  margin: 150px 0;
+}
+
+#index-body .about-text-header {
+  font-family: fenwick, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#index-body .about-text {
+  font-family: fenwick, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  max-width: 50vw;
+  font-size: 1.5rem;
+  padding: 10px 0 30px 0;
+}
+
+#index-body .about-section {
+  padding-top: 100px;
+}
+
+#artists-body #menu {
+  fill: black;
+}
+
+#artists-body h1 {
+  padding: 100px 100px;
+}
+
+#artists-body .white-banner-top {
+  background-image: url("white_banner_top.HASH_REF_04af792bb7b02a7fa8db2578c14bf228.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 40px;
+}
+
+#artists-body .white-banner-content {
+  background-color: white;
+  width: 100vw;
+  height: 50px;
+}
+/*# sourceMappingURL=index.HASH_REF_62e29be6db72205ee17af4d6088b44af.css.map */
