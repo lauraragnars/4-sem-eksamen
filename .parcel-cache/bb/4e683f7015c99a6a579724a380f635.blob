@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+@font-face {
+  font-family: "pilowlavaa";
+  src: url("/fonts/Pilowlava-Regular.woff2") format("woff2"), url("/fonts/Pilowlava-Regular.woff") format("woff");
+}
+#index-body {
+  background-color: #8000ff;
+  background-image: url("/background_images/glitch_6.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+
+#program-body {
+  background-color: #7979ff;
+  background-image: url("/background_images/glitch_13.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+
+#merch-body {
+  background-color: #835fff;
+}
+
+#practical-info-body {
+  background-color: #4a53e8;
+}
+
+#artists-body {
+  background-color: #b29bff;
+  background-image: url("/background_images/glitch_1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+
+#tickets-body {
+  background-color: #f2c0ff;
+}
+
+#map-body {
+  background-color: #835fff;
+}
