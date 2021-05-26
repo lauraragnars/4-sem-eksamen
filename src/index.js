@@ -13,6 +13,7 @@ function start() {
   // show data at load
   loadJSON(link, showData);
 
+  countdown();
   // animateText();
 }
 
@@ -32,33 +33,74 @@ function showData(data) {
   document.querySelector(".about-text").textContent = data.fields.aboutText;
 }
 
+function countdown() {
+  const countDownDate = new Date("Jun 4, 2021 16:00:00").getTime();
+
+  const myfunc = setInterval(function () {
+    let now = new Date().getTime();
+    let timeleft = countDownDate - now;
+
+    const days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+
+    document.querySelector(".days").textContent = days + "d ";
+    document.querySelector(".hours").textContent = hours + "h ";
+    document.querySelector(".mins").textContent = minutes + "m ";
+    document.querySelector(".secs").textContent = seconds + "s";
+  }, 1000);
+}
+
 // function animateText() {
-document.fonts.ready.then(
-  function () {
-    let fontFaceSet = document.fonts;
-    console.log(fontFaceSet);
+// document.fonts.ready.then(
+//   function () {
+//     let fontFaceSet = document.fonts;
+//     console.log(fontFaceSet);
 
-    console.log("blotter ready");
+//     console.log("blotter ready");
 
-    const elem = document.querySelector(".splash-text");
-    const text = new Blotter.Text("DISTORTION Ø", {
-      family: "pilowlava-regular",
-      weight: 100,
-      size: 150,
-      fill: "white",
-    });
+//     const elem = document.querySelector(".splash-text");
+//     const text = new Blotter.Text("DISTORTION Ø", {
+//       family: "pilowlava-regular",
+//       weight: 100,
+//       size: 150,
+//       fill: "white",
+//     });
 
-    let material = new Blotter.RollingDistortMaterial();
+//     let material = new Blotter.RollingDistortMaterial();
 
-    material.uniforms.uSineDistortAmplitude.value = 0.04;
+//     material.uniforms.uSineDistortAmplitude.value = 0.04;
 
-    let blotter = new Blotter(material, {
-      texts: text,
-    });
+//     let blotter = new Blotter(material, {
+//       texts: text,
+//     });
 
-    let scope = blotter.forText(text);
+//     let scope = blotter.forText(text);
 
-    scope.appendTo(elem);
-  }.bind(this)
-);
+//     scope.appendTo(elem);
+//   }.bind(this)
+// );
 // }
+
+document.fonts.ready.then(function () {
+  const elem = document.querySelector(".splash-text");
+  const text = new Blotter.Text("DISTORTION Ø", {
+    family: "pilowlava-regular",
+    weight: 100,
+    size: 150,
+    fill: "white",
+  });
+
+  let material = new Blotter.RollingDistortMaterial();
+
+  material.uniforms.uSineDistortAmplitude.value = 0.04;
+
+  let blotter = new Blotter(material, {
+    texts: text,
+  });
+
+  let scope = blotter.forText(text);
+
+  scope.appendTo(elem);
+});
