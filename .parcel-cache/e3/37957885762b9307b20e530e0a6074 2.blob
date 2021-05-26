@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+@font-face {
+  font-family: "pilowlavaa";
+  src: url("1f147b7089d2aec9f5a9d3d7b0684763") format("woff2"), url("1686514d077e56ae1322f9a0918c26a6") format("woff");
+}
+
+#index-body {
+  background-color: #8000ff;
+  background-image: url("86f62dbdbd6793f3ed66fb14f870a450");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+
+#program-body {
+  background-color: #7979ff;
+  background-image: url("237e13fc3ba1fb718b7006c33dbff384");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+
+#merch-body {
+  background-color: #835fff;
+}
+
+#practical-info-body {
+  background-color: #4a53e8;
+}
+
+#artists-body {
+  background-color: #b29bff;
+  background-image: url("c2ce870bf5728fbb13847baad0076231");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+
+#tickets-body {
+  background-color: #f2c0ff;
+}
+
+#map-body {
+  background-color: #835fff;
+}
