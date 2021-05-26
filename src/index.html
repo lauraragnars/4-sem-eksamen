@@ -7,69 +7,105 @@
     <link rel="stylesheet" href="https://use.typekit.net/sxe1kwu.css" />
     <link rel="stylesheet" href="../sass/main.scss" />
     <link rel="stylesheet" href="/sass/typography.css" />
-    <script crossorigin src="https://raw.githack.com/bradley/Blotter/master/build/blotter.min.js"></script>
+    <script
+      crossorigin
+      src="https://raw.githack.com/bradley/Blotter/master/build/blotter.min.js"
+    ></script>
     <script src="https://raw.githack.com/bradley/Blotter/master/build/materials/liquidDistortMaterial.js"></script>
     <script src="https://raw.githack.com/bradley/Blotter/master/build/materials/rollingDistortMaterial.js"></script>
 
     <title>Distortion Ø</title>
   </head>
-  <body id="index-body">
-    <header>
-      <a href="index.html">
-        <div class="header-logo"></div>
-      </a>
-      <div class="burger-menu">
-        <div class="burger-menu-icon cursor-link">
-          <img class="burger-menu-svg" src="/assets/menu.svg" alt="Burger menu icon" />
-          <h3 class="burger-menu-text">Menu</h3>
+  <body>
+    <div id="index-body" class="body-container">
+      <header>
+        <a href="index.html">
+          <div class="header-logo"></div>
+        </a>
+        <div class="burger-menu">
+          <div class="burger-menu-icon cursor-link">
+            <img
+              class="burger-menu-svg"
+              src="/assets/menu.svg"
+              alt="Burger menu icon"
+            />
+            <h3 class="burger-menu-text">Menu</h3>
+          </div>
+          <nav class="burger-nav">
+            <ul>
+              <li><a class="cursor-link-big" href="index.html">Home</a></li>
+              <li>
+                <a class="cursor-link-big" href="artists.html">Artists</a>
+              </li>
+              <li>
+                <a class="cursor-link-big" href="tickets.html">Tickets</a>
+              </li>
+              <li>
+                <a class="cursor-link-big" href="program.html">Program</a>
+              </li>
+              <li><a class="cursor-link-big" href="merch.html">Merch</a></li>
+              <li>
+                <a class="cursor-link-big" href="practical-info.html"
+                  >Practical Info</a
+                >
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav class="burger-nav">
-          <ul>
-            <li><a class="cursor-link-big" href="index.html">Home</a></li>
-            <li><a class="cursor-link-big" href="artists.html">Artists</a></li>
-            <li><a class="cursor-link-big" href="tickets.html">Tickets</a></li>
-            <li><a class="cursor-link-big" href="program.html">Program</a></li>
-            <li><a class="cursor-link-big" href="merch.html">Merch</a></li>
-            <li><a class="cursor-link-big" href="practical-info.html">Practical Info</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+      </header>
 
-    <main>
-      <section class="splash-text"></section>
+      <main>
+        <section class="splash-text"></section>
 
-      <section class="pink-banner">
-        <div class="about-section section-wrapper">
-          <h4 class="about-text-header"></h4>
-          <p class="about-text"></p>
-          <a class="button cursor-link" href="artists.html">See the whole lineup</a>
+        <section class="section-wrapper cta-section">
+          <a class="cursor-link-big" href="tickets.html">
+            <div class="blob-1">
+              <p>Buy <br />tickets</p>
+            </div>
+          </a>
+          <a class="cursor-link-big" href="map.html">
+            <div class="blob-2">
+              <p>Festival <br />map</p>
+            </div>
+          </a>
+        </section>
+
+        <section class="pink-banner">
+          <div class="about-section section-wrapper">
+            <h4 class="about-text-header"></h4>
+            <p class="about-text"></p>
+            <a class="button cursor-link" href="artists.html"
+              >See the whole lineup</a
+            >
+          </div>
+        </section>
+
+        <section class="countdown-section section-wrapper">
+          <div class="countdown">
+            <p class="days"></p>
+            <p class="hours"></p>
+            <p class="mins"></p>
+            <p class="secs"></p>
+          </div>
+          <a class="button cursor-link" href="">Add to calender</a>
+        </section>
+
+        <section class="video-section">
+          <video autoplay muted loop>
+            <source src="/assets/distortion_o_recap.mp4" type="video/mp4" />
+          </video>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="/assets/distortion_logo.png" alt="Distortion logo" />
+          </div>
         </div>
-      </section>
-
-      <section class="countdown-section section-wrapper">
-        <div class="countdown">
-          <p class="days"></p>
-          <p class="hours"></p>
-          <p class="mins"></p>
-          <p class="secs"></p>
-        </div>
-        <a class="button cursor-link" href="">Add to calender</a>
-      </section>
-
-      <section class="video-section">
-        <video autoplay muted loop>
-          <source src="/assets/distortion_o_recap.mp4" type="video/mp4" />
-        </video>
-      </section>
-    </main>
-
-    <footer>
-      <div class="footer-content">
-        <div class="footer-logo"><img src="/assets/distortion_logo.png" alt="Distortion logo" /></div>
-      </div>
-    </footer>
-    <div class="custom-cursor"></div>
+      </footer>
+      <div class="custom-cursor"></div>
+    </div>
   </body>
   <script src="index.js"></script>
   <script src="main.js"></script>

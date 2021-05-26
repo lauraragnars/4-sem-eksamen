@@ -64,4 +64,42 @@
       color: white;
     }
   }
+
+  .cta-section {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 150px;
+    a {
+      text-decoration: none;
+    }
+    .blob-1 {
+      background-image: url("/assets/blob1.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 132px;
+      margin: 0 10px;
+    }
+
+    p {
+      text-decoration: none;
+      color: black;
+      font-family: fenwick, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      text-align: center;
+      padding-top: 45px;
+    }
+
+    .blob-2 {
+      background-image: url("/assets/blob2.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 132px;
+      margin: 0 10px;
+    }
+  }
 }
