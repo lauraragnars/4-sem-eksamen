@@ -1,0 +1,23 @@
+* {
+  cursor: none;
+}
+
+.custom-cursor--link {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.custom-cursor--biglink {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.custom-cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: white;
+  z-index: 8;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transition: transform 0.15s ease-in-out;
+}

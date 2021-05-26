@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="f4f8522cb2d66414de6407aacbcbc207">
+    <link rel="stylesheet" href="b33b9dd6dbbf7b10d7bb74d0a42caf12">
+    <script crossorigin="" src="f344cc1dc8b71c9d251300701530d8bb"></script>
+    <script src="10a942fae94e371af333810febfb13fb"></script>
+    <script src="2add8a96de662f2581eabab3622fd4be"></script>
+
+    <title>Distortion Ø</title>
+  </head>
+  <body id="index-body">
+    <header>
+      <a href="0b494a7d9fcacb0e85709034f764e2a9">
+        <div class="header-logo"></div>
+      </a>
+      <div class="burger-menu">
+        <div class="burger-menu-icon">
+          <img class="burger-menu-svg" src="e10563fb36d9c09de5dd30e2cf84ab5a" alt="Burger menu icon">
+          <h3 class="burger-menu-text">Menu</h3>
+        </div>
+        <nav class="burger-nav">
+          <ul>
+            <li><a href="0b494a7d9fcacb0e85709034f764e2a9">Home</a></li>
+            <li><a href="acd08c131182e77cc1ff32195afb9545">Artists</a></li>
+            <li><a href="0a36df930088ea5ccf345be9c512f5b6">Tickets</a></li>
+            <li><a href="2f18d579a4e559d66567c3a06835974e">Program</a></li>
+            <li><a href="89a970087ae20c1cc239186b4596efea">Merch</a></li>
+            <li><a href="412f16378ac0bf9c8137294fd7d5fa87">Practical Info</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="splash-text"></section>
+
+      <section class="pink-banner"></section>
+    </main>
+
+    <footer>
+      <!-- <img class="footer-blob" src="/assets/footer_blob.svg" alt="Footer blob shape" /> -->
+      <div class="footer-content">
+        <div class="footer-logo cursor-link"><img src="79b18d9bfddd1d68845d2080f1d3bb28" alt="Distortion logo"></div>
+      </div>
+    </footer>
+    <div class="custom-cursor"></div>
+  </body>
+  <script src="d26b03374973c7a2a151878b2e21a00f"></script>
+  <script src="67e2e1d839de85b19f58d77aecf7b303"></script>
+</html>

@@ -1,0 +1,10 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "spaceID", function () {
+  return spaceID;
+});
+_parcelHelpers.export(exports, "accessCode", function () {
+  return accessCode;
+});
+const spaceID = "hor06eo7sbnb";
+const accessCode = "v4LMdVINCbVKD5EiT3xd7HTxYBdDedDAw_naZMWSOVQ";

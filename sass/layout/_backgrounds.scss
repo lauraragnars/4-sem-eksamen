@@ -1,19 +1,21 @@
 @import "../base/variables";
 
-#index-body {
-  background-color: $color-background-1;
-  background-image: url("/background_images/glitch_6.jpg");
+body {
+  min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
+  overflow-x: hidden;
+}
+
+#index-body {
+  background-color: $color-background-1;
+  background-image: url("/background_images/glitch_6_c.jpg");
 }
 
 #program-body {
   background-color: $color-background-2;
   background-image: url("/background_images/glitch_13.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
 }
 
 #merch-body {
@@ -27,9 +29,6 @@
 #artists-body {
   background-color: $color-background-5;
   background-image: url("/background_images/glitch_1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
 }
 
 #tickets-body {

@@ -1,12 +1,13 @@
 @import "base/reset";
-@import "base/typography";
+//@import "base/typography.css";
 @import "base/variables";
 
-@import "layout/navigation";
 @import "layout/header";
 @import "layout/footer";
 @import "layout/backgrounds";
+@import "layout/general";
 
 @import "components/buttons";
+@import "components/customCursor";
 
 @import "pages/index";

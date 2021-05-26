@@ -1,0 +1,17 @@
+footer {
+  width: 100vw;
+  height: 280px;
+  background-image: url("/assets/footer_blob.svg");
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position-x: center;
+
+  .footer-logo {
+    position: relative;
+    bottom: -60px;
+    left: 60px;
+    img {
+      width: 100px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+let Size = 0.001;
+
+    function increaseSize() {
+      const elem = document.querySelector(".splash-text");
+      const text = new Blotter.Text("DISTORTION Ø", {
+        family: "pilowlavaa",
+        weight: 100,
+        size: 180,
+        fill: "white",
+      });
+
+      let material = new Blotter.RollingDistortMaterial();
+
+      material.uniforms.uSineDistortAmplitude.value = 0.04;
+
+      let blotter = new Blotter(material, {
+        texts: text,
+      });
+
+      let scope = blotter.forText(text);
+
+      scope.appendTo(elem);
+
+      Size += 0.001;
+    }
+
+    increaseSize();
