@@ -4,7 +4,7 @@ import { accessToken, spaceID } from "../config/contentful";
 
 const entryID = "2leewETkIiBBffCNGNSQh5";
 const link = `https://cdn.contentful.com/spaces/${spaceID}/environments/master/entries?access_token=${accessToken}&content_type=ticketModule`;
-
+const link2 = `https://cdn.contentful.com/spaces/${spaceID}/environments/master/entries/${entryID}?access_token=${accessToken}`;
 window.addEventListener("load", start);
 
 function start() {
@@ -12,6 +12,7 @@ function start() {
 
   // show data at load
   loadJSON(link, showData);
+  loadJSON(link2, showData2);
 }
 
 // loads data
@@ -24,7 +25,7 @@ function loadJSON(url, callback) {
 }
 
 function showData(data) {
-  console.log(data);
+  //   console.log(data);
 
   const allTickets = data.items;
 
@@ -32,19 +33,49 @@ function showData(data) {
   container.innerHTML = "";
   let ticketTemplate = document.querySelector("template");
 
+  //sort the tickets in alphabetic order
+  allTickets.sort(function (a, b) {
+    if (a.fields.ticketType < b.fields.ticketType) {
+      return -1;
+    } else {
+      return 1;
+    }
+  });
+
   allTickets.forEach((ticket) => {
     let klon = ticketTemplate.cloneNode(true).content;
-    console.log(ticket);
-    console.log(klon);
+
+    const allImages = data.includes.Asset;
+
+    allImages.forEach((image) => {
+      console.log(ticket);
+      console.log(image.fields.file.url);
+      if (ticket.fields.ticketType === image.fields.title) {
+        klon.querySelector("article").style.backgroundImage = `url(${image.fields.file.url})`;
+      }
+    });
+
+    // Check if tickets are sold out
+    if (ticket.fields.soldOut === true) {
+      klon.querySelector(".ticket-button").textContent = `Sold out`;
+    } else {
+      klon.querySelector(".ticket-button").textContent = `Buy now`;
+    }
+
+    if (ticket.fields.ticketType.includes("camping")) {
+      klon.querySelector("a").textContent = "here";
+    }
+
     klon.querySelector(".ticket-type").textContent = ticket.fields.ticketType;
-    klon.querySelector("p").textContent = ticket.fields.description;
+    klon.querySelector(".desc").textContent = ticket.fields.description;
     klon.querySelector("h4").textContent = ticket.fields.ageLimit;
-    klon.querySelector("p+p").textContent = ticket.fields.price;
+    klon.querySelector(".price").textContent = ticket.fields.price;
 
     container.appendChild(klon);
-
-    //Check if tickets are sold out
-    // if (ticket.field.soldOut === true) {
-    // }
   });
+}
+
+function showData2(data) {
+  document.querySelector("h1").textContent = data.fields.header;
+  document.querySelector(".info-text").textContent = data.fields.ticketInfo;
 }
