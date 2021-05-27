@@ -31,16 +31,19 @@ function showData(data) {
   console.log(data);
   const list = document.querySelector("#all-artists");
   const allArtists = data.items;
+  list.innerHTML = "";
 
   // sort the artists, so the headliners are first
   allArtists.sort(function (a, b) {
     return b.fields.isHeadliner - a.fields.isHeadliner;
   });
 
+  console.log(allArtists, "all artists");
+
   allArtists.forEach((artist) => {
     let li = document.createElement("li");
     li.textContent = artist.fields.artistName;
-
+    // li.classList.add("cursor-link");
     // Checks if artist is headliner
     if (artist.fields.isHeadliner === true) {
       li.classList.add("headliner");

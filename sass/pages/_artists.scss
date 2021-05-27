@@ -36,6 +36,11 @@
     min-width: 120px;
   }
 
+  .selected {
+    background-color: black;
+    color: white;
+  }
+
   button:active {
     background-color: black;
     color: white;
@@ -49,6 +54,7 @@
       font-size: 3rem;
       font-weight: 400;
       font-style: normal;
+      margin: 10px 0;
     }
 
     .headliner {
