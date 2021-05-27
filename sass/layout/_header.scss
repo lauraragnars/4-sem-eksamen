@@ -24,6 +24,14 @@
   padding-top: 150px;
   text-align: center;
 
+  @media (min-width: 768px) {
+    padding-top: 80px;
+  }
+
+  @media (min-width: 2400px) {
+    padding-top: 150px;
+  }
+
   li {
     display: block;
   }
@@ -46,8 +54,12 @@
     // letter-spacing: -2px;
 
     @media (min-width: 768px) {
+      font-size: 4rem;
+      line-height: 80px;
+    }
+    @media (min-width: 2400px) {
       font-size: 6rem;
-      line-height: 110px;
+      line-height: 115px;
     }
 
     &:hover {
