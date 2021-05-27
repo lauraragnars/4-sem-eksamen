@@ -28,7 +28,7 @@ function start() {
   loadJSON(link, showData);
 
   countdown();
-  // animateText();
+  animateText();
 }
 
 // loads data
@@ -68,56 +68,35 @@ function countdown() {
     document.querySelector(".secs").textContent = seconds + "s";
   }, 1000);
 }
+function animateText() {
+  document.fonts.ready.then(function () {
+    const elem = document.querySelector(".splash-text");
+    const text = new Blotter.Text("DISTORTION Ø", {
+      family: "pilowlava-regular",
+      weight: 100,
+      size: 150,
+      fill: "white",
+    });
 
-// function animateText() {
-// document.fonts.ready.then(
-//   function () {
-//     let fontFaceSet = document.fonts;
-//     console.log(fontFaceSet);
+    let material = new Blotter.RollingDistortMaterial();
 
-//     console.log("blotter ready");
+    material.uniforms.uSineDistortAmplitude.value = 0.04;
 
-//     const elem = document.querySelector(".splash-text");
-//     const text = new Blotter.Text("DISTORTION Ø", {
-//       family: "pilowlava-regular",
-//       weight: 100,
-//       size: 150,
-//       fill: "white",
-//     });
+    let blotter = new Blotter(material, {
+      texts: text,
+    });
 
-//     let material = new Blotter.RollingDistortMaterial();
+    let scope = blotter.forText(text);
 
-//     material.uniforms.uSineDistortAmplitude.value = 0.04;
+    scope.appendTo(elem);
 
-//     let blotter = new Blotter(material, {
-//       texts: text,
-//     });
-
-//     let scope = blotter.forText(text);
-
-//     scope.appendTo(elem);
-//   }.bind(this)
-// );
-// }
-
-document.fonts.ready.then(function () {
-  const elem = document.querySelector(".splash-text");
-  const text = new Blotter.Text("DISTORTION Ø", {
-    family: "pilowlava-regular",
-    weight: 100,
-    size: 150,
-    fill: "white",
+    adjustCanvas();
   });
+}
 
-  let material = new Blotter.RollingDistortMaterial();
-
-  material.uniforms.uSineDistortAmplitude.value = 0.04;
-
-  let blotter = new Blotter(material, {
-    texts: text,
-  });
-
-  let scope = blotter.forText(text);
-
-  scope.appendTo(elem);
-});
+function adjustCanvas() {
+  const canvas = document.querySelector(".splash-text .b-canvas");
+  canvas.setAttribute("height", "400");
+  canvas.setAttribute("width", "800");
+  console.log(canvas);
+}
