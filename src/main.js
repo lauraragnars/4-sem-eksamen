@@ -2,6 +2,20 @@
 
 window.addEventListener("load", start);
 
+if ("fonts" in document) {
+  let font = new FontFace(
+    "Pilowlava-Regular",
+    "url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff2) format('woff2'), url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff2) format('woff')"
+  );
+
+  Promise.all([font.load()]).then(function (loadedFonts) {
+    // Render them at the same time
+    loadedFonts.forEach(function (font) {
+      document.fonts.add(font);
+    });
+  });
+}
+
 // burger menu
 function start() {
   console.log("start");
@@ -74,29 +88,22 @@ function toggle(elm) {
 //   scope.appendTo(document.querySelector(".header-logo"));
 // }
 
-if ("fonts" in document) {
-  let font = new FontFace(
-    "Pilowlava-Regular",
-    "url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff2) format('woff2'), url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff) format('woff')"
-  );
+// if ("fonts" in document) {
+//   let font = new FontFace(
+//     "Pilowlava-Regular",
+//     "url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff2) format('woff2'), url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff) format('woff')"
+//   );
 
-  font
-    .load()
-    .then(function (loadedFont) {
-      document.fonts.add(loadedFont);
-      text.style.fontFamily = '"Pilowlava-Regular"';
-    })
-    .catch(function (error) {
-      console.log("Failed to load font: " + error);
-    });
-
-  //   Promise.all([font.load()]).then(function (loadedFonts) {
-  //     // Render them at the same time
-  //     loadedFonts.forEach(function (font) {
-  //       document.fonts.add(font);
-  //     });
-  //   });
-}
+//   font
+//     .load()
+//     .then(function (loadedFont) {
+//       document.fonts.add(loadedFont);
+//       text.style.fontFamily = '"Pilowlava-Regular"';
+//     })
+//     .catch(function (error) {
+//       console.log("Failed to load font: " + error);
+//     });
+// }
 
 document.fonts.ready.then(function () {
   console.log(document.fonts);

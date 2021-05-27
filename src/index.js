@@ -5,19 +5,19 @@ import { accessToken, spaceID } from "../config/contentful";
 const entryID = "7k6leOigNpIaVOJ3Nf9Mrb";
 const link = `https://cdn.contentful.com/spaces/${spaceID}/environments/master/entries/${entryID}?access_token=${accessToken}`;
 
-// if ("fonts" in document) {
-//   let font = new FontFace(
-//     "Pilowlava-Regular",
-//     "url(../fonts/Pilowlava-Regular.woff2) format('woff2'), url(../fonts/Pilowlava-Regular.woff) format('woff')"
-//   );
+if ("fonts" in document) {
+  let font = new FontFace(
+    "Pilowlava-Regular",
+    "url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff2) format('woff2'), url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff2) format('woff')"
+  );
 
-//   Promise.all([font.load()]).then(function (loadedFonts) {
-//     // Render them at the same time
-//     // loadedFonts.forEach(function (font) {
-//     document.fonts.add(font);
-//     // });
-//   });
-// }
+  Promise.all([font.load()]).then(function (loadedFonts) {
+    // Render them at the same time
+    loadedFonts.forEach(function (font) {
+      document.fonts.add(font);
+    });
+  });
+}
 
 window.addEventListener("load", start);
 
