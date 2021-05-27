@@ -2,8 +2,8 @@
 
 import { accessToken, spaceID } from "../config/contentful";
 
-const entryID = "7k6leOigNpIaVOJ3Nf9Mrb";
-const link = `https://cdn.contentful.com/spaces/${spaceID}/environments/master/entries/${entryID}?access_token=${accessToken}`;
+const entryID = "2leewETkIiBBffCNGNSQh5";
+const link = `https://cdn.contentful.com/spaces/${spaceID}/environments/master/entries?access_token=${accessToken}&content_type=ticketModule`;
 
 window.addEventListener("load", start);
 
@@ -26,6 +26,25 @@ function loadJSON(url, callback) {
 function showData(data) {
   console.log(data);
 
-  document.querySelector(".about-text-header").textContent = data.fields.aboutHeader;
-  document.querySelector(".about-text").textContent = data.fields.aboutText;
+  const allTickets = data.items;
+
+  let container = document.querySelector("#tickets-container");
+  container.innerHTML = "";
+  let ticketTemplate = document.querySelector("template");
+
+  allTickets.forEach((ticket) => {
+    let klon = ticketTemplate.cloneNode(true).content;
+    console.log(ticket);
+    console.log(klon);
+    klon.querySelector(".ticket-type").textContent = ticket.fields.ticketType;
+    klon.querySelector("p").textContent = ticket.fields.description;
+    klon.querySelector("h4").textContent = ticket.fields.ageLimit;
+    klon.querySelector("p+p").textContent = ticket.fields.price;
+
+    container.appendChild(klon);
+
+    //Check if tickets are sold out
+    // if (ticket.field.soldOut === true) {
+    // }
+  });
 }
