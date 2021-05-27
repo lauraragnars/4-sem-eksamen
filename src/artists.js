@@ -3,19 +3,23 @@
 import { accessToken, spaceID } from "../config/contentful";
 
 const entryID = "6URuJ3VZ8sEaX4JN4z9DDk";
-// const link = `https://cdn.contentful.com/spaces/${spaceID}/environments/master/entries?/${entryID}?access_token=${accessToken}`;
 
 const link = `https://cdn.contentful.com/spaces/${spaceID}/environments/master/entries?access_token=${accessToken}&content_type=individualArtist`;
 
 window.addEventListener("load", start);
 
+let currentFilter = "*";
+let allArtists;
+
 function start() {
   console.log("start");
 
   // show data at load
-  loadJSON(link, showData);
+  loadJSON(link, setData);
 
-  // animateText();
+  document.querySelectorAll(".filter").forEach((button) => {
+    button.addEventListener("click", setFilter);
+  });
 }
 
 // loads data
@@ -27,23 +31,43 @@ function loadJSON(url, callback) {
     });
 }
 
-function showData(data) {
-  console.log(data);
+function setData(data) {
+  allArtists = data.items;
+  showData();
+}
+
+function setFilter() {
+  document.querySelectorAll(".filter").forEach((button) => {
+    button.classList.remove("selected");
+  });
+  console.log(this.dataset.kategori, "set filter");
+  currentFilter = this.dataset.kategori;
+  this.classList.add("selected");
+  showData();
+}
+
+function showData() {
   const list = document.querySelector("#all-artists");
-  const allArtists = data.items;
   list.innerHTML = "";
+  console.log(allArtists);
+  let filteredList;
+
+  if (currentFilter === "*") {
+    filteredList = allArtists;
+  } else {
+    console.log("filter lis");
+    filteredList = allArtists.filter(filterList);
+  }
 
   // sort the artists, so the headliners are first
-  allArtists.sort(function (a, b) {
-    return b.fields.isHeadliner - a.fields.isHeadliner;
+  filteredList.sort(function (a, b) {
+    return a.fields.isHeadliner - b.fields.isHeadliner;
   });
 
-  console.log(allArtists, "all artists");
-
-  allArtists.forEach((artist) => {
+  filteredList.forEach((artist) => {
     let li = document.createElement("li");
     li.textContent = artist.fields.artistName;
-    // li.classList.add("cursor-link");
+
     // Checks if artist is headliner
     if (artist.fields.isHeadliner === true) {
       li.classList.add("headliner");
@@ -53,24 +77,12 @@ function showData(data) {
   });
 }
 
-// function showArtists(data) {
-//   console.log(data);
-//   // const allArtists = data.allArtists;
-//   const container = document.querySelector("#all-artists");
-//   // container.innerHTML = "";
-
-//   // let listTemplate = document.querySelector("template");
-
-//   // allArtists.forEach((artist) => {
-//   //   if (filter == "lineup") {
-//   //     let klon = listTemplate.cloneNode(true).textContent;
-//   //     klon.querySelector("h2").textContent =
-//   //       artist.allArtists.individualArtist.artistName;
-//   //     container.appendChild(klon);
-
-//   //     // container.lastElementChild.addEventListener("click", () => {
-//   //     //     location.href = "single.html?id=" + artist.;
-//   //     // })
-//   //   }
-//   // });
-// }
+function filterList(artist) {
+  if (artist.fields.day) {
+    if (artist.fields.day.toLowerCase() === currentFilter) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}

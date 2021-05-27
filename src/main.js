@@ -19,7 +19,9 @@ function start() {
 
   // event listeners
   // burger menu
-  document.querySelector(".burger-menu-icon").addEventListener("click", toggleBurgerMenu);
+  document
+    .querySelector(".burger-menu-icon")
+    .addEventListener("click", toggleBurgerMenu);
 
   // custom cursor
   document.addEventListener("mousemove", customCursorMove);
@@ -72,18 +74,36 @@ function toggle(elm) {
 //   scope.appendTo(document.querySelector(".header-logo"));
 // }
 
+if ("fonts" in document) {
+  let font = new FontFace(
+    "Pilowlava-Regular",
+    "url(/fonts/Pilowlava-Regular.woff2) format('woff2'), url(/fonts/Pilowlava-Regular.woff) format('woff')"
+  );
+
+  Promise.all([font.load()]).then(function (loadedFonts) {
+    // Render them at the same time
+    loadedFonts.forEach(function (font) {
+      document.fonts.add(font);
+    });
+  });
+}
+
 document.fonts.ready.then(function () {
+  console.log(document.fonts);
   let text = new Blotter.Text("Ø", {
     family: "pilowlava-regular",
     size: 70,
-    fill: "white",
+    fill: "#fff",
   });
+
   let material = new window.Blotter.LiquidDistortMaterial();
+
   let blotter = new Blotter(material, { texts: text });
+
   material.uniforms.uSpeed.value = 0.1;
   material.uniforms.uVolatility.value = 0.1;
   let scope = blotter.forText(text);
-  scope.globalCompositeOperation = "difference";
+
   scope.appendTo(document.querySelector(".header-logo"));
 });
 

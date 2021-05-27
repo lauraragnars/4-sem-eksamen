@@ -1,7 +1,8 @@
 @import "../base/variables";
 
-body {
+.body-container {
   min-height: 100vh;
+  width: 100vw;
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
@@ -27,6 +28,13 @@ body {
 }
 
 #artists-body {
+  background-color: $color-background-5;
+  background-image: url("/background_images/glitch_1.png");
+  background-size: 150%;
+  background-position-x: center;
+}
+
+#single-artist-body {
   background-color: $color-background-5;
   background-image: url("/background_images/glitch_1.png");
   background-size: 150%;
