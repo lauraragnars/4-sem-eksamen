@@ -5,6 +5,20 @@ import { accessToken, spaceID } from "../config/contentful";
 const entryID = "7k6leOigNpIaVOJ3Nf9Mrb";
 const link = `https://cdn.contentful.com/spaces/${spaceID}/environments/master/entries/${entryID}?access_token=${accessToken}`;
 
+if ("fonts" in document) {
+  let font = new FontFace(
+    "Pilowlava-Regular",
+    "url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff2) format('woff2'), url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff2) format('woff')"
+  );
+
+  Promise.all([font.load()]).then(function (loadedFonts) {
+    // Render them at the same time
+    loadedFonts.forEach(function (font) {
+      document.fonts.add(font);
+    });
+  });
+}
+
 window.addEventListener("load", start);
 
 function start() {
@@ -14,7 +28,7 @@ function start() {
   loadJSON(link, showData);
 
   countdown();
-  // animateText();
+  animateText();
 }
 
 // loads data
@@ -29,7 +43,8 @@ function loadJSON(url, callback) {
 function showData(data) {
   console.log(data);
 
-  document.querySelector(".about-text-header").textContent = data.fields.aboutHeader;
+  document.querySelector(".about-text-header").textContent =
+    data.fields.aboutHeader;
   document.querySelector(".about-text").textContent = data.fields.aboutText;
 }
 
@@ -41,7 +56,9 @@ function countdown() {
     let timeleft = countDownDate - now;
 
     const days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const hours = Math.floor(
+      (timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
     const minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
@@ -51,56 +68,35 @@ function countdown() {
     document.querySelector(".secs").textContent = seconds + "s";
   }, 1000);
 }
+function animateText() {
+  document.fonts.ready.then(function () {
+    const elem = document.querySelector(".splash-text");
+    const text = new Blotter.Text("DISTORTION Ø", {
+      family: "pilowlava-regular",
+      weight: 100,
+      size: 150,
+      fill: "white",
+    });
 
-// function animateText() {
-// document.fonts.ready.then(
-//   function () {
-//     let fontFaceSet = document.fonts;
-//     console.log(fontFaceSet);
+    let material = new Blotter.RollingDistortMaterial();
 
-//     console.log("blotter ready");
+    material.uniforms.uSineDistortAmplitude.value = 0.04;
 
-//     const elem = document.querySelector(".splash-text");
-//     const text = new Blotter.Text("DISTORTION Ø", {
-//       family: "pilowlava-regular",
-//       weight: 100,
-//       size: 150,
-//       fill: "white",
-//     });
+    let blotter = new Blotter(material, {
+      texts: text,
+    });
 
-//     let material = new Blotter.RollingDistortMaterial();
+    let scope = blotter.forText(text);
 
-//     material.uniforms.uSineDistortAmplitude.value = 0.04;
+    scope.appendTo(elem);
 
-//     let blotter = new Blotter(material, {
-//       texts: text,
-//     });
-
-//     let scope = blotter.forText(text);
-
-//     scope.appendTo(elem);
-//   }.bind(this)
-// );
-// }
-
-document.fonts.ready.then(function () {
-  const elem = document.querySelector(".splash-text");
-  const text = new Blotter.Text("DISTORTION Ø", {
-    family: "pilowlava-regular",
-    weight: 100,
-    size: 150,
-    fill: "white",
+    adjustCanvas();
   });
+}
 
-  let material = new Blotter.RollingDistortMaterial();
-
-  material.uniforms.uSineDistortAmplitude.value = 0.04;
-
-  let blotter = new Blotter(material, {
-    texts: text,
-  });
-
-  let scope = blotter.forText(text);
-
-  scope.appendTo(elem);
-});
+function adjustCanvas() {
+  const canvas = document.querySelector(".splash-text .b-canvas");
+  canvas.setAttribute("height", "400");
+  canvas.setAttribute("width", "800");
+  console.log(canvas);
+}
