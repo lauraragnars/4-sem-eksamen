@@ -1,0 +1,42 @@
+/* @font-face {
+  font-family: "pilowlava-regular";
+  src: url("/fonts/Pilowlava-Regular.woff2") format("woff2"), url("/fonts/Pilowlava-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+} */
+
+/* // Fenwick Regular
+
+// font-family: fenwick, sans-serif;
+// font-weight: 400;
+// font-style: normal;
+
+// Fenwick Italic
+
+// font-family: fenwick, sans-serif;
+// font-weight: 400;
+// font-style: italic;
+
+// Fenwick Light
+
+// font-family: fenwick, sans-serif;
+// font-weight: 300;
+// font-style: normal;
+
+// Fenwick Light Italic
+
+// font-family: fenwick, sans-serif;
+// font-weight: 300;
+// font-style: italic;
+
+// Fenwick Bold
+
+// font-family: fenwick, sans-serif;
+// font-weight: 700;
+// font-style: normal;
+
+// Fenwick Bold Italic
+
+// font-family: fenwick, sans-serif;
+// font-weight: 700;
+// font-style: italic; */

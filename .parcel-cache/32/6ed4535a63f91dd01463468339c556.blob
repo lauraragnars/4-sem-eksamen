@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="f3a8307108a5f2e8a7dc3516be51922d">
+    <!-- <script src="blotter/blotter.min.js"></script>
+    <script src="blotter/liquidDistortMaterial.js"></script> -->
+    <link rel="stylesheet" href="e72b45f661526793c171b0e11a146bf3">
+    <title>Distortion Ø - Map</title>
+  </head>
+  <body id="map-body">
+    <header>
+      <div class="header-logo"></div>
+    </header>
+  </body>
+  <script src="50ab9b7cc626b0046b993815ad54b7c3"></script>
+</html>

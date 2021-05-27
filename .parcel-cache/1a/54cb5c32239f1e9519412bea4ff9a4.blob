@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="df777cf97e0b4549e125c620776144dd">
+    <link rel="stylesheet" href="2c06c001d9ebe87c5ba695b39edfa0a4">
+    <link rel="stylesheet" href="166cb5eeb11c52174c7f1f9ecf6da4bf">
+    <script crossorigin="" src="5d2fcaef06d68edb53b1b3219b8a6d1a"></script>
+    <script src="a7a782fbfae3957aff0eb7c3857eb132"></script>
+    <script src="3f60454e5aeb8fa1ae471251600a503d"></script>
+    <title>Distortion Ø - Artists</title>
+  </head>
+  <body>
+    <div id="artists-body" class="body-container">
+      <header>
+        <a href="6545caf4ab4556b995e5585ca6e47a06">
+          <div class="header-logo cursor-link-big"></div>
+        </a>
+        <div class="burger-menu">
+          <div class="burger-menu-icon cursor-link">
+            <img class="burger-menu-svg" src="c9106fe10ae86d81b82e441783405d90" alt="Burger menu icon">
+            <h3 class="burger-menu-text">Menu</h3>
+          </div>
+          <nav class="burger-nav">
+            <ul>
+              <li><a class="cursor-link-big" href="6545caf4ab4556b995e5585ca6e47a06">Home</a></li>
+              <li>
+                <a class="cursor-link-big" href="a359fae62f5cca169572d0ad8755ac04">Artists</a>
+              </li>
+              <li>
+                <a class="cursor-link-big" href="e6b90dba134be96bcbeeed6a8f30de00">Tickets</a>
+              </li>
+              <li>
+                <a class="cursor-link-big" href="8a9bdb93b64ab90b3f02f5f151425b44">Program</a>
+              </li>
+              <li><a class="cursor-link-big" href="75a1012143db27abe66af7925e9534f5">Merch</a></li>
+              <li>
+                <a class="cursor-link-big" href="1d05d780496300cce4a5bc2e1f583224">Practical Info</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <h1 class="splash-text">Artists</h1>
+
+        <section class="white-banner">
+          <div class="white-banner-top"></div>
+          <div class="white-banner-content">
+            <div class="button-container">
+              <button class="button cursor-link filter selected" data-kategori="*">
+                Full line-up
+              </button>
+              <button class="button cursor-link filter" data-kategori="friday">
+                Friday
+              </button>
+              <button class="button cursor-link filter" data-kategori="saturday">
+                Saturday
+              </button>
+            </div>
+
+            <ul id="all-artists"></ul>
+          </div>
+          <div class="white-banner-bottom"></div>
+        </section>
+      </main>
+      <footer>
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="e408c21afa6ebee1f813288a4824789d" alt="Distortion logo">
+          </div>
+        </div>
+      </footer>
+      <div class="custom-cursor"></div>
+    </div>
+  </body>
+  <script src="a0804290bb5c9e0348dda046b0d7e48b"></script>
+  <script src="ac1a92b014adbdcc3b469912e5687e71"></script>
+</html>
