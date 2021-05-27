@@ -77,21 +77,31 @@ function toggle(elm) {
 if ("fonts" in document) {
   let font = new FontFace(
     "Pilowlava-Regular",
-    "url(/fonts/Pilowlava-Regular.woff2) format('woff2'), url(/fonts/Pilowlava-Regular.woff) format('woff')"
+    "url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff2) format('woff2'), url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff) format('woff')"
   );
 
-  Promise.all([font.load()]).then(function (loadedFonts) {
-    // Render them at the same time
-    loadedFonts.forEach(function (font) {
-      document.fonts.add(font);
+  font
+    .load()
+    .then(function (loadedFont) {
+      document.fonts.add(loadedFont);
+      text.style.fontFamily = '"Pilowlava-Regular"';
+    })
+    .catch(function (error) {
+      console.log("Failed to load font: " + error);
     });
-  });
+
+  //   Promise.all([font.load()]).then(function (loadedFonts) {
+  //     // Render them at the same time
+  //     loadedFonts.forEach(function (font) {
+  //       document.fonts.add(font);
+  //     });
+  //   });
 }
 
 document.fonts.ready.then(function () {
   console.log(document.fonts);
   let text = new Blotter.Text("Ø", {
-    family: "pilowlava-regular",
+    family: "Pilowlava-Regular",
     size: 70,
     fill: "#fff",
   });

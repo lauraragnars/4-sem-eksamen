@@ -5,6 +5,20 @@ import { accessToken, spaceID } from "../config/contentful";
 const entryID = "7k6leOigNpIaVOJ3Nf9Mrb";
 const link = `https://cdn.contentful.com/spaces/${spaceID}/environments/master/entries/${entryID}?access_token=${accessToken}`;
 
+// if ("fonts" in document) {
+//   let font = new FontFace(
+//     "Pilowlava-Regular",
+//     "url(../fonts/Pilowlava-Regular.woff2) format('woff2'), url(../fonts/Pilowlava-Regular.woff) format('woff')"
+//   );
+
+//   Promise.all([font.load()]).then(function (loadedFonts) {
+//     // Render them at the same time
+//     // loadedFonts.forEach(function (font) {
+//     document.fonts.add(font);
+//     // });
+//   });
+// }
+
 window.addEventListener("load", start);
 
 function start() {
@@ -29,7 +43,8 @@ function loadJSON(url, callback) {
 function showData(data) {
   console.log(data);
 
-  document.querySelector(".about-text-header").textContent = data.fields.aboutHeader;
+  document.querySelector(".about-text-header").textContent =
+    data.fields.aboutHeader;
   document.querySelector(".about-text").textContent = data.fields.aboutText;
 }
 
@@ -41,7 +56,9 @@ function countdown() {
     let timeleft = countDownDate - now;
 
     const days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const hours = Math.floor(
+      (timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
     const minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
