@@ -1,6 +1,10 @@
 .section-wrapper {
-  width: 70vw;
-  margin-left: 15vw;
+  width: 80vw;
+  margin-left: 10vw;
+  @media (min-width: 768px) {
+    width: 70vw;
+    margin-left: 15vw;
+  }
 }
 
 h1 {
@@ -11,9 +15,10 @@ h1 {
   text-align: center;
   padding-top: 150px;
   padding-bottom: 50px;
+  letter-spacing: -1px;
 
   @media (min-width: 768px) {
-    font-size: 5rem;
+    font-size: 4rem;
     text-align: left;
     margin-left: 15vw;
     padding: 90px 0 20px 0;
