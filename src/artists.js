@@ -68,14 +68,25 @@ function showData() {
 
   filteredList.forEach((artist) => {
     let li = document.createElement("li");
-    li.textContent = artist.fields.artistName;
 
-    // Checks if artist is headliner
-    if (artist.fields.isHeadliner === true) {
-      li.classList.add("headliner");
+    // checks if the artist should be included in the
+    if (artist.fields.exludedFromArtists === true) {
+      console.log("excluded");
+    } else {
+      li.textContent = artist.fields.artistName;
+
+      // Checks if artist is headliner
+      if (artist.fields.isHeadliner === true) {
+        li.classList.add("headliner");
+      }
+
+      li.addEventListener("click", () => {
+        location.href = "artist.html?id=" + artist.sys.id;
+      });
+
+      // add the <li> to the html list
+      list.append(li);
     }
-    // add the <li> to the html list
-    list.append(li);
   });
 }
 

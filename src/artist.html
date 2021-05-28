@@ -7,28 +7,21 @@
     <link rel="stylesheet" href="https://use.typekit.net/sxe1kwu.css" />
     <link rel="stylesheet" href="../sass/main.scss" />
     <link rel="stylesheet" href="/sass/typography.css" />
-    <script
-      crossorigin
-      src="https://raw.githack.com/bradley/Blotter/master/build/blotter.min.js"
-    ></script>
+    <script crossorigin src="https://raw.githack.com/bradley/Blotter/master/build/blotter.min.js"></script>
     <script src="https://raw.githack.com/bradley/Blotter/master/build/materials/liquidDistortMaterial.js"></script>
     <script src="https://raw.githack.com/bradley/Blotter/master/build/materials/rollingDistortMaterial.js"></script>
 
-    <title>Distortion Ø</title>
+    <title>Distortion Ø - Artists</title>
   </head>
   <body>
-    <div id="single-artist-body" class="body-container">
+    <div id="artist-body" class="body-container">
       <header>
         <a href="index.html">
           <div class="header-logo"></div>
         </a>
         <div class="burger-menu">
           <div class="burger-menu-icon cursor-link">
-            <img
-              class="burger-menu-svg"
-              src="/assets/menu.svg"
-              alt="Burger menu icon"
-            />
+            <img class="burger-menu-svg" src="/assets/menu.svg" alt="Burger menu icon" />
             <h3 class="burger-menu-text">Menu</h3>
           </div>
           <nav class="burger-nav">
@@ -45,14 +38,36 @@
               </li>
               <li><a class="cursor-link-big" href="merch.html">Merch</a></li>
               <li>
-                <a class="cursor-link-big" href="practical-info.html"
-                  >Practical Info</a
-                >
+                <a class="cursor-link-big" href="practical-info.html">Practical Info</a>
               </li>
             </ul>
           </nav>
         </div>
       </header>
+
+      <main>
+        <h1 class="splash-text">Artists</h1>
+
+        <section class="white-banner">
+         
+            <div class="white-banner-top"></div>
+            <div class="white-banner-content">
+              <section class="section-wrapper">
+              <div class="artist-photo">
+                <!-- <img class="artist-photo" src="" alt="Artist photo" /> -->
+              </div>
+              <div>
+                <h2 class="artist-name"></h2>
+                <p class="artist-info"></p>
+                <div>
+                  <iframe class="spotify-player" width="400" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="white-banner-bottom"></div>
+          </section>
+        </section>
+      </main>
 
       <footer>
         <div class="footer-content">
@@ -64,6 +79,6 @@
       <div class="custom-cursor"></div>
     </div>
   </body>
-  <script src="index.js"></script>
   <script src="main.js"></script>
+  <script src="single-artist.js"></script>
 </html>
