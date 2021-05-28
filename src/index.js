@@ -72,7 +72,7 @@ function animateText() {
   document.fonts.ready.then(function () {
     const elem = document.querySelector(".splash-text");
     const text = new Blotter.Text("DISTORTION Ø", {
-      family: "pilowlava-regular",
+      family: "Pilowlava-Regular",
       weight: 100,
       size: 150,
       fill: "white",
