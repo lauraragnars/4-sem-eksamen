@@ -2,7 +2,9 @@
 
 import { accessToken, spaceID } from "../config/contentful";
 
-const entryID = "6URuJ3VZ8sEaX4JN4z9DDk";
+// const entryID = "6URuJ3VZ8sEaX4JN4z9DDk";
+const entryID = "9Tp2XfVYOtuB36CZHDiPi";
+//const link = `https://cdn.contentful.com/spaces/${spaceID}/environments/master/entries/${entryID}?access_token=${accessToken}`;
 
 const link = `https://cdn.contentful.com/spaces/${spaceID}/environments/master/entries?access_token=${accessToken}&content_type=individualArtist`;
 
