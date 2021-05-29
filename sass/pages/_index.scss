@@ -3,10 +3,15 @@
     text-align: center;
     margin: 150px 0 0 0;
 
-    // .b-canvas {
-    //   width: 80vw !important;
-    //   height: 42vw !important;
-    // }
+    .b-canvas {
+      width: 90vw !important;
+      height: auto !important;
+
+      @media (min-width: 768px) {
+        width: 80vw !important;
+        height: auto !important;
+      }
+    }
   }
 
   .pink-banner {
