@@ -43,8 +43,7 @@ function loadJSON(url, callback) {
 function showData(data) {
   console.log(data);
 
-  document.querySelector(".about-text-header").textContent =
-    data.fields.aboutHeader;
+  document.querySelector(".about-text-header").textContent = data.fields.aboutHeader;
   document.querySelector(".about-text").textContent = data.fields.aboutText;
 }
 
@@ -56,9 +55,7 @@ function countdown() {
     let timeleft = countDownDate - now;
 
     const days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor(
-      (timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
+    const hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
@@ -68,6 +65,7 @@ function countdown() {
     document.querySelector(".secs").textContent = seconds + "s";
   }, 1000);
 }
+
 function animateText() {
   document.fonts.ready.then(function () {
     const elem = document.querySelector(".splash-text");

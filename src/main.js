@@ -20,22 +20,9 @@ if ("fonts" in document) {
 function start() {
   console.log("start");
 
-  // blotter();
-
-  // let fontFaceSet = document.fonts;
-  // console.log(fontFaceSet);
-
-  // document.fonts.ready.then(function () {
-  //   // Any operation that needs to be done only after all the fonts
-  //   // have finished loading can go here.
-  //   console.log(fontFaceSet);
-  // });
-
   // event listeners
   // burger menu
-  document
-    .querySelector(".burger-menu-icon")
-    .addEventListener("click", toggleBurgerMenu);
+  document.querySelector(".burger-menu-icon").addEventListener("click", toggleBurgerMenu);
 
   // custom cursor
   document.addEventListener("mousemove", customCursorMove);
