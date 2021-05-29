@@ -37,6 +37,15 @@
     display: none;
   }
 
+  // details {
+  //   &:last-child {
+  //     summary {
+  //       border-bottom: 2px solid white;
+  //     }
+
+  //   }
+  // }
+
   details summary {
     width: 100%;
     padding: 0.8rem 0;

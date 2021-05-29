@@ -22,11 +22,18 @@ function start() {
 
   // event listeners
   // burger menu
-  document.querySelector(".burger-menu-icon").addEventListener("click", toggleBurgerMenu);
+  document
+    .querySelector(".burger-menu-icon")
+    .addEventListener("click", toggleBurgerMenu);
 
   // custom cursor
   document.addEventListener("mousemove", customCursorMove);
   document.querySelectorAll(".cursor-link").forEach((elm) => {
+    elm.addEventListener("mouseover", onMouseOver);
+    elm.addEventListener("mouseleave", onMouseLeave);
+  });
+
+  document.querySelectorAll(".program-module .artists li").forEach((elm) => {
     elm.addEventListener("mouseover", onMouseOver);
     elm.addEventListener("mouseleave", onMouseLeave);
   });

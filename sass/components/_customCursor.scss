@@ -2,14 +2,6 @@
   cursor: none;
 }
 
-// .custom-cursor--link {
-//   transform: translate(-50%, -50%) scale(1);
-// }
-
-// .custom-cursor--biglink {
-//   transform: translate(-50%, -50%) scale(1);
-// }
-
 .custom-cursor {
   position: absolute;
   width: 20px;
@@ -20,4 +12,14 @@
   mix-blend-mode: difference;
   pointer-events: none;
   transition: transform 0.15s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none;
+  }
+
+  * {
+    cursor: auto;
+  }
 }
