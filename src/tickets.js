@@ -58,8 +58,10 @@ function showData(data) {
     // Check if tickets are sold out
     if (ticket.fields.soldOut === true) {
       klon.querySelector(".ticket-button").textContent = `Sold out`;
+      klon.querySelector(".ticket-button").disabled = true;
     } else {
       klon.querySelector(".ticket-button").textContent = `Buy now`;
+      klon.querySelector(".ticket-button").disabled = false;
     }
 
     if (ticket.fields.ticketType.includes("camping")) {
@@ -77,5 +79,7 @@ function showData(data) {
 
 function showData2(data) {
   document.querySelector("h1").textContent = data.fields.header;
-  document.querySelector(".info-text").textContent = data.fields.ticketInfo;
+  document.querySelector(".refund").textContent = data.fields.refund;
+  document.querySelector(".day-tickets").textContent = data.fields.dayTickets;
+  document.querySelector(".other-info").textContent = data.fields.otherInfo;
 }

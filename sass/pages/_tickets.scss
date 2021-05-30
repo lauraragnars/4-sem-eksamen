@@ -92,6 +92,20 @@
     min-width: 120px;
   }
 
+  button:active,
+  button[active] {
+    background-color: $black;
+    color: $white;
+    border: $white solid 1px;
+  }
+
+  button:disabled,
+  button[disabled] {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+  }
+
   .black-banner-top {
     background-image: url(/assets/black_banner_top.svg);
     background-repeat: no-repeat;
