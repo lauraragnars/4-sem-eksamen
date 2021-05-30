@@ -15,6 +15,10 @@ function start() {
   loadJSON(link, showData);
 }
 
+document.querySelector(".back-button a").addEventListener("click", () => {
+  history.back();
+});
+
 // loads data
 function loadJSON(url, callback) {
   fetch(url)
@@ -28,10 +32,13 @@ function showData(data) {
   console.log(data);
 
   document.querySelector(".artist-name").textContent = data.fields.artistName;
-  document.querySelector(".artist-info").textContent =
-    data.fields.day + " / " + data.fields.scene + " / " + data.fields.time;
+  document.querySelector(".artist-info").textContent = data.fields.day + " / " + data.fields.scene + " / " + data.fields.time;
   //   https://open.spotify.com/embed/track/
-  document.querySelector("iframe").src = data.fields.spotifyTrackLink;
+  if (data.fields.spotifyTrackLink) {
+    document.querySelector("iframe").src = data.fields.spotifyTrackLink;
+  } else {
+    document.querySelector(".player-container").style.display = "none";
+  }
   document.querySelector(".facebook a").href = data.fields.facebookLink;
   document.querySelector(".instagram a").href = data.fields.instagramLink;
   document.querySelector(".soundcloud a").href = data.fields.soundCloudLink;
@@ -47,7 +54,5 @@ function showData(data) {
 function showImage(data) {
   console.log(data);
 
-  document.querySelector(
-    ".artist-photo"
-  ).style.backgroundImage = `url(${data.fields.file.url})`;
+  document.querySelector(".artist-photo").style.backgroundImage = `url(${data.fields.file.url})`;
 }
