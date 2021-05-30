@@ -22,9 +22,7 @@ function start() {
 
   // event listeners
   // burger menu
-  document
-    .querySelector(".burger-menu-icon")
-    .addEventListener("click", toggleBurgerMenu);
+  document.querySelector(".burger-menu-icon").addEventListener("click", toggleBurgerMenu);
 
   // custom cursor
   document.addEventListener("mousemove", customCursorMove);

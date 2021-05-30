@@ -40,6 +40,10 @@
     padding-left: 0;
   }
 
+  .selected {
+    color: black;
+  }
+
   a {
     display: none;
     text-decoration: none;
@@ -101,4 +105,5 @@ header .open {
   position: fixed;
   top: 1rem;
   left: 1.5rem;
+  z-index: 5;
 }

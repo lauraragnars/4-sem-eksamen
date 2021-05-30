@@ -39,10 +39,30 @@ function showData(data) {
   } else {
     document.querySelector(".player-container").style.display = "none";
   }
-  document.querySelector(".facebook a").href = data.fields.facebookLink;
-  document.querySelector(".instagram a").href = data.fields.instagramLink;
-  document.querySelector(".soundcloud a").href = data.fields.soundCloudLink;
-  document.querySelector(".spotify a").href = data.fields.spotifyLink;
+
+  if (data.fields.facebookLink) {
+    document.querySelector(".facebook a").href = data.fields.facebookLink;
+  } else {
+    document.querySelector(".facebook").style.display = "none";
+  }
+
+  if (data.fields.instagramLink) {
+    document.querySelector(".instagram a").href = data.fields.instagramLink;
+  } else {
+    document.querySelector(".instagram").style.display = "none";
+  }
+
+  if (data.fields.soundCloudLink) {
+    document.querySelector(".soundcloud a").href = data.fields.soundCloudLink;
+  } else {
+    document.querySelector(".soundcloud").style.display = "none";
+  }
+
+  if (data.fields.spotifyLink) {
+    document.querySelector(".spotify a").href = data.fields.spotifyLink;
+  } else {
+    document.querySelector(".spotify").style.display = "none";
+  }
 
   const assetID = data.fields.artistPhoto.sys.id;
 
