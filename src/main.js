@@ -20,17 +20,6 @@ if ("fonts" in document) {
 function start() {
   console.log("start");
 
-  // blotter();
-
-  // let fontFaceSet = document.fonts;
-  // console.log(fontFaceSet);
-
-  // document.fonts.ready.then(function () {
-  //   // Any operation that needs to be done only after all the fonts
-  //   // have finished loading can go here.
-  //   console.log(fontFaceSet);
-  // });
-
   // event listeners
   // burger menu
   document
@@ -40,6 +29,11 @@ function start() {
   // custom cursor
   document.addEventListener("mousemove", customCursorMove);
   document.querySelectorAll(".cursor-link").forEach((elm) => {
+    elm.addEventListener("mouseover", onMouseOver);
+    elm.addEventListener("mouseleave", onMouseLeave);
+  });
+
+  document.querySelectorAll(".program-module .artists li").forEach((elm) => {
     elm.addEventListener("mouseover", onMouseOver);
     elm.addEventListener("mouseleave", onMouseLeave);
   });

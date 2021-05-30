@@ -5,15 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://use.typekit.net/sxe1kwu.css" />
-    <!-- <script src="blotter/blotter.min.js"></script>
-    <script src="blotter/liquidDistortMaterial.js"></script> -->
     <link rel="stylesheet" href="../sass/main.scss" />
-    <title>Distortion Ø - Practical Info</title>
+
+    <script
+      crossorigin
+      src="https://raw.githack.com/bradley/Blotter/master/build/blotter.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://raw.githack.com/bradley/Blotter/master/build/materials/liquidDistortMaterial.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://raw.githack.com/bradley/Blotter/master/build/materials/rollingDistortMaterial.js"
+    ></script>
+
+    <title>Distortion Ø - Practical info</title>
   </head>
-  <body id="practical-info-body">
-    <header>
-      <div class="header-logo"></div>
-    </header>
+  <body>
+    <div id="practical-info-body" class="body-container">
+      <header>
+        <a class="cursor-link-big" href="index.html">
+          <div class="header-logo"></div>
+        </a>
+        <div class="burger-menu">
+          <div class="burger-menu-icon cursor-link">
+            <img
+              class="burger-menu-svg"
+              src="/assets/menu.svg"
+              alt="Burger menu icon"
+            />
+            <h3 class="burger-menu-text">Menu</h3>
+          </div>
+          <nav class="burger-nav">
+            <ul>
+              <li><a class="cursor-link-big" href="index.html">Home</a></li>
+              <li>
+                <a class="cursor-link-big" href="artists.html">Artists</a>
+              </li>
+              <li>
+                <a class="cursor-link-big" href="tickets.html">Tickets</a>
+              </li>
+              <li>
+                <a class="cursor-link-big" href="program.html">Program</a>
+              </li>
+              <li><a class="cursor-link-big" href="merch.html">Merch</a></li>
+              <li>
+                <a class="cursor-link-big" href="practical-info.html"
+                  >Practical Info</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <h1 class="main-header">Practical info</h1>
+        <p class="info-text">Find all the information you need below</p>
+
+        <section class="section-wrapper">
+          <div class="practical-info-main"></div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="/assets/distortion_logo.png" alt="Distortion logo" />
+          </div>
+        </div>
+      </footer>
+      <div class="custom-cursor"></div>
+    </div>
+
+    <template>
+      <details>
+        <summary></summary>
+        <p></p>
+      </details>
+    </template>
   </body>
+
   <script src="main.js"></script>
+  <script src="practical-info.js"></script>
 </html>

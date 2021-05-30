@@ -19,13 +19,14 @@
       crossorigin
       src="https://raw.githack.com/bradley/Blotter/master/build/materials/rollingDistortMaterial.js"
     ></script>
+
     <title>Distortion Ø - Artists</title>
   </head>
   <body>
-    <div id="artists-body" class="body-container">
+    <div id="artist-body" class="body-container">
       <header>
         <a href="index.html">
-          <div class="header-logo cursor-link-big"></div>
+          <div class="header-logo"></div>
         </a>
         <div class="burger-menu">
           <div class="burger-menu-icon cursor-link">
@@ -65,29 +66,63 @@
         <section class="white-banner">
           <div class="white-banner-top"></div>
           <div class="white-banner-content">
-            <div class="button-container">
-              <button
-                class="button cursor-link filter selected"
-                data-kategori="*"
-              >
-                Full line-up
-              </button>
-              <button class="button cursor-link filter" data-kategori="friday">
-                Friday
-              </button>
-              <button
-                class="button cursor-link filter"
-                data-kategori="saturday"
-              >
-                Saturday
-              </button>
+            <div class="back-button cursor-link">
+              <a>&larr; Back</a>
             </div>
+            <section class="section-wrapper flex">
+              <div class="artist-photo">
+                <!-- <img class="artist-photo" src="" alt="Artist photo" /> -->
+              </div>
+              <div class="artist-text">
+                <h2 class="artist-name"></h2>
+                <p class="artist-info"></p>
+                <div>
+                  <p class="some-text">Listen</p>
+                  <div class="container">
+                    <iframe
+                      class="spotify-player"
+                      frameborder="0"
+                      allowtransparency="true"
+                      allow="encrypted-media"
+                    ></iframe>
+                  </div>
+                </div>
 
-            <ul id="all-artists"></ul>
+                <p class="some-text">Explore</p>
+
+                <div class="artist-some">
+                  <div class="instagram cursor-link">
+                    <a href="" target="_blank" rel="noopener">
+                      <img src="/assets/instagram.png" alt="Instagram logo"
+                    /></a>
+                  </div>
+
+                  <div class="facebook cursor-link">
+                    <a href="" target="_blank" rel="noopener">
+                      <img src="/assets/facebook.png" alt="Facebook logo" />
+                    </a>
+                  </div>
+
+                  <div class="spotify cursor-link">
+                    <a href="" target="_blank" rel="noopener">
+                      <img src="/assets/spotify.png" alt="spotify logo" />
+                    </a>
+                  </div>
+
+                  <div class="soundcloud cursor-link">
+                    <a href="" target="_blank" rel="noopener">
+                      <img src="/assets/soundcloud.png" alt="Soundcloud logo" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
+
           <div class="white-banner-bottom"></div>
         </section>
       </main>
+
       <footer>
         <div class="footer-content">
           <div class="footer-logo">
@@ -98,6 +133,6 @@
       <div class="custom-cursor"></div>
     </div>
   </body>
-  <script src="artists.js"></script>
   <script src="main.js"></script>
+  <script src="single-artist.js"></script>
 </html>

@@ -25,6 +25,7 @@
 
 #practical-info-body {
   background-color: $color-background-4;
+  background-image: url("/background_images/glitch_13.jpg");
 }
 
 #artists-body {
@@ -34,7 +35,7 @@
   background-position-x: center;
 }
 
-#single-artist-body {
+#artist-body {
   background-color: $color-background-5;
   background-image: url("/background_images/glitch_1.png");
   background-size: 150%;

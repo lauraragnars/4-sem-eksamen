@@ -10,6 +10,7 @@
     background-position: top;
     width: 100vw;
     height: 3vw;
+    opacity: 0.9;
   }
 
   .white-banner-bottom {
@@ -19,6 +20,7 @@
     background-position: top;
     width: 100vw;
     height: 5vw;
+    opacity: 0.9;
   }
 
   .white-banner-content {
@@ -26,6 +28,7 @@
     padding: 100px 0;
     width: 100vw;
     height: 80vh;
+    opacity: 0.9;
     // overflow-y: scroll;
   }
 
@@ -58,7 +61,7 @@
     margin: 50px 0;
     padding: 0;
     overflow-y: scroll;
-    height: 60vh;
+    height: 50vh;
     li {
       font-family: fenwick, sans-serif;
       font-size: 1.5rem;

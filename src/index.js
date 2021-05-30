@@ -68,11 +68,12 @@ function countdown() {
     document.querySelector(".secs").textContent = seconds + "s";
   }, 1000);
 }
+
 function animateText() {
   document.fonts.ready.then(function () {
     const elem = document.querySelector(".splash-text");
     const text = new Blotter.Text("DISTORTION Ø", {
-      family: "pilowlava-regular",
+      family: "Pilowlava-Regular",
       weight: 100,
       size: 150,
       fill: "white",
@@ -90,13 +91,13 @@ function animateText() {
 
     scope.appendTo(elem);
 
-    adjustCanvas();
+    // adjustCanvas();
   });
 }
 
-function adjustCanvas() {
-  const canvas = document.querySelector(".splash-text .b-canvas");
-  canvas.setAttribute("height", "400");
-  canvas.setAttribute("width", "800");
-  console.log(canvas);
-}
+// function adjustCanvas() {
+//   const canvas = document.querySelector(".splash-text .b-canvas");
+//   canvas.setAttribute("height", "400");
+//   canvas.setAttribute("width", "800");
+//   console.log(canvas);
+// }
