@@ -69,7 +69,7 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding-top: 18%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    padding-top: 16%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
   }
 
   /* Then style the iframe to fit in the container div with full height and width */
@@ -93,6 +93,7 @@
 
     @media (min-width: 900px) {
       margin-left: 30px;
+      margin-top: 0;
     }
 
     .artist-name {
