@@ -15,6 +15,10 @@ function start() {
   loadJSON(link, showData);
 }
 
+document.querySelector(".back-button a").addEventListener("click", () => {
+  history.back();
+});
+
 // loads data
 function loadJSON(url, callback) {
   fetch(url)
@@ -28,14 +32,37 @@ function showData(data) {
   console.log(data);
 
   document.querySelector(".artist-name").textContent = data.fields.artistName;
-  document.querySelector(".artist-info").textContent =
-    data.fields.day + " / " + data.fields.scene + " / " + data.fields.time;
+  document.querySelector(".artist-info").textContent = data.fields.day + " / " + data.fields.scene + " / " + data.fields.time;
   //   https://open.spotify.com/embed/track/
-  document.querySelector("iframe").src = data.fields.spotifyTrackLink;
-  document.querySelector(".facebook a").href = data.fields.facebookLink;
-  document.querySelector(".instagram a").href = data.fields.instagramLink;
-  document.querySelector(".soundcloud a").href = data.fields.soundCloudLink;
-  document.querySelector(".spotify a").href = data.fields.spotifyLink;
+  if (data.fields.spotifyTrackLink) {
+    document.querySelector("iframe").src = data.fields.spotifyTrackLink;
+  } else {
+    document.querySelector(".player-container").style.display = "none";
+  }
+
+  if (data.fields.facebookLink) {
+    document.querySelector(".facebook a").href = data.fields.facebookLink;
+  } else {
+    document.querySelector(".facebook").style.display = "none";
+  }
+
+  if (data.fields.instagramLink) {
+    document.querySelector(".instagram a").href = data.fields.instagramLink;
+  } else {
+    document.querySelector(".instagram").style.display = "none";
+  }
+
+  if (data.fields.soundCloudLink) {
+    document.querySelector(".soundcloud a").href = data.fields.soundCloudLink;
+  } else {
+    document.querySelector(".soundcloud").style.display = "none";
+  }
+
+  if (data.fields.spotifyLink) {
+    document.querySelector(".spotify a").href = data.fields.spotifyLink;
+  } else {
+    document.querySelector(".spotify").style.display = "none";
+  }
 
   const assetID = data.fields.artistPhoto.sys.id;
 
@@ -47,7 +74,5 @@ function showData(data) {
 function showImage(data) {
   console.log(data);
 
-  document.querySelector(
-    ".artist-photo"
-  ).style.backgroundImage = `url(${data.fields.file.url})`;
+  document.querySelector(".artist-photo").style.backgroundImage = `url(${data.fields.file.url})`;
 }

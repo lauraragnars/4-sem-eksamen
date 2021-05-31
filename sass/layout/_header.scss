@@ -40,6 +40,10 @@
     padding-left: 0;
   }
 
+  .selected {
+    color: black;
+  }
+
   a {
     display: none;
     text-decoration: none;
@@ -55,7 +59,7 @@
 
     @media (min-width: 768px) {
       font-size: 4rem;
-      line-height: 80px;
+      line-height: 70px;
     }
     @media (min-width: 2400px) {
       font-size: 6rem;
@@ -99,6 +103,7 @@ header .open {
 .header-logo {
   mix-blend-mode: difference;
   position: fixed;
-  top: 1rem;
+  top: 0.5rem;
   left: 1.5rem;
+  z-index: 5;
 }

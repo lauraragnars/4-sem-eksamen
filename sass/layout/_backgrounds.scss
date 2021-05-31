@@ -11,6 +11,7 @@
 
 #index-body {
   background-color: $color-background-1;
+  //background-color: $color-background-7;
   background-image: url("/background_images/glitch_6_c.jpg");
 }
 
@@ -31,14 +32,12 @@
 #artists-body {
   background-color: $color-background-5;
   background-image: url("/background_images/glitch_1.png");
-  background-size: 150%;
   background-position-x: center;
 }
 
 #artist-body {
   background-color: $color-background-5;
   background-image: url("/background_images/glitch_1.png");
-  background-size: 150%;
   background-position-x: center;
 }
 
@@ -51,4 +50,5 @@
 
 #map-body {
   background-color: $color-background-7;
+  background-image: url("/background_images/glitch_6_c.jpg");
 }

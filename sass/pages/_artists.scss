@@ -1,3 +1,5 @@
+@import "../base/variables";
+
 #artists-body {
   #menu {
     fill: black;
@@ -27,7 +29,7 @@
     background-color: white;
     padding: 100px 0;
     width: 100vw;
-    height: 80vh;
+    height: auto;
     opacity: 0.9;
     // overflow-y: scroll;
   }
@@ -44,11 +46,13 @@
     border: solid black 1px;
     margin: 0 10px;
     min-width: 120px;
+    transition: 0.3s;
   }
 
   .selected {
     background-color: black;
     color: white;
+    transition: 0.3s;
   }
 
   button:active {
@@ -61,16 +65,22 @@
     margin: 50px 0;
     padding: 0;
     overflow-y: scroll;
-    height: 50vh;
+    height: 60vh;
     li {
       font-family: fenwick, sans-serif;
       font-size: 1.5rem;
       font-weight: 400;
       font-style: normal;
       margin: 10px 0;
+      transition: 0.3s;
 
       @media (min-width: 768px) {
         font-size: 2.5rem;
+
+        &:hover {
+          color: rgb(139, 139, 139);
+          transition: 0.3s;
+        }
       }
     }
 
