@@ -35,12 +35,14 @@
               <li>
                 <a class="cursor-link-big" href="program.html">Program</a>
               </li>
+              <li>
+                <a class="cursor-link-big selected" href="map.html">Festival map</a>
+              </li>
+              <li><a class="cursor-link-big" href="about.html">About</a></li>
+              <li></li>
               <li><a class="cursor-link-big" href="merch.html">Merch</a></li>
               <li>
                 <a class="cursor-link-big" href="practical-info.html">Practical Info</a>
-              </li>
-              <li>
-                <a class="cursor-link-big selected" href="map.html">Festival map</a>
               </li>
             </ul>
           </nav>
@@ -49,6 +51,30 @@
 
       <main>
         <h1>Festival map</h1>
+
+        <section class="section-wrapper circles">
+          <div class="flex">
+            <div class="food"></div>
+            <p>Food</p>
+          </div>
+          <div class="flex">
+            <div class="bar"></div>
+            <p>Bars</p>
+          </div>
+          <div class="flex">
+            <div class="scene"></div>
+            <p>Scenes</p>
+          </div>
+          <div class="flex">
+            <div class="toilets"></div>
+            <p>Toilets</p>
+          </div>
+          <div class="flex">
+            <div class="entrance"></div>
+            <p>Entrance</p>
+          </div>
+        </section>
+
         <div class="svg">
           <?xml version="1.0" encoding="utf-8"?>
           <!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -124,8 +150,13 @@
                 stroke-miterlimit: 10;
               }
 
+              circle {
+                transition: 0.3s;
+              }
+
               circle:hover {
                 fill: pink;
+                transition: 0.3s;
               }
             </style>
             <g id="map">

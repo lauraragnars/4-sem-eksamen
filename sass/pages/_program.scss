@@ -3,12 +3,17 @@
 #program-body {
   h1 {
     color: white;
+    margin-bottom: 60px;
+  }
+
+  .program-container {
+    margin-bottom: 150px;
   }
 
   .program-module {
     width: 100vw;
-    padding: 0 10vw;
-    margin-bottom: 50px;
+    padding: 10vw 10vw;
+    // margin-bottom: 50px;
     color: black;
 
     @media (min-width: 768px) {

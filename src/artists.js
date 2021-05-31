@@ -37,11 +37,11 @@ function setData(data) {
 
 function setFilter() {
   document.querySelectorAll(".filter").forEach((button) => {
-    button.classList.remove("selected");
+    button.classList.remove("selected-button");
   });
   console.log(this.dataset.kategori, "set filter");
   currentFilter = this.dataset.kategori;
-  this.classList.add("selected");
+  this.classList.add("selected-button");
   showData();
 }
 
