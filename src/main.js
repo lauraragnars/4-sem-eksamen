@@ -1,6 +1,8 @@
 "use strict";
+// import { accessToken, spaceID } from "./../config/contentful";
 
-window.addEventListener("load", start);
+// const entryID = "5gg1gYX5ukguLwZB1jubOl";
+// const link = `https://cdn.contentful.com/spaces/${spaceID}/environments/master/entries/${entryID}?access_token=${accessToken}`;
 
 if ("fonts" in document) {
   let font = new FontFace(
@@ -16,9 +18,16 @@ if ("fonts" in document) {
   });
 }
 
+window.addEventListener("load", start);
+
 // burger menu
 function start() {
   console.log("start");
+
+  blotter();
+
+  // show data at load
+  //loadJSON(link, showData);
 
   // event listeners
   // burger menu
@@ -41,6 +50,19 @@ function start() {
     elm.addEventListener("mouseleave", onMouseLeaveB);
   });
 }
+
+// loads data
+// function loadJSON(url, callback) {
+//   fetch(url)
+//     .then((response) => response.json())
+//     .then((jsonData) => {
+//       callback(jsonData);
+//     });
+// }
+
+// function showData(data) {
+//   console.log(data);
+// }
 
 function toggleBurgerMenu() {
   const burgerMenu = document.querySelector(".burger-menu");
@@ -65,56 +87,26 @@ function toggle(elm) {
   return elm;
 }
 
-// function blotter() {
-//   let text = new Blotter.Text("Ø", {
-//     family: "pilowlava-regular",
-//     size: 70,
-//     fill: "white",
-//   });
-//   let material = new window.Blotter.LiquidDistortMaterial();
-//   let blotter = new Blotter(material, { texts: text });
-//   material.uniforms.uSpeed.value = 0.1;
-//   material.uniforms.uVolatility.value = 0.1;
-//   let scope = blotter.forText(text);
-//   scope.globalCompositeOperation = "difference";
-//   scope.appendTo(document.querySelector(".header-logo"));
-// }
+function blotter() {
+  document.fonts.ready.then(function () {
+    console.log(document.fonts);
+    let text = new Blotter.Text("Ø", {
+      family: "Pilowlava-Regular",
+      size: 70,
+      fill: "#fff",
+    });
 
-// if ("fonts" in document) {
-//   let font = new FontFace(
-//     "Pilowlava-Regular",
-//     "url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff2) format('woff2'), url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff) format('woff')"
-//   );
+    let material = new window.Blotter.LiquidDistortMaterial();
 
-//   font
-//     .load()
-//     .then(function (loadedFont) {
-//       document.fonts.add(loadedFont);
-//       text.style.fontFamily = '"Pilowlava-Regular"';
-//     })
-//     .catch(function (error) {
-//       console.log("Failed to load font: " + error);
-//     });
-// }
+    let blotter = new Blotter(material, { texts: text });
 
-document.fonts.ready.then(function () {
-  console.log(document.fonts);
-  let text = new Blotter.Text("Ø", {
-    family: "Pilowlava-Regular",
-    size: 70,
-    fill: "#fff",
+    material.uniforms.uSpeed.value = 0.1;
+    material.uniforms.uVolatility.value = 0.1;
+    let scope = blotter.forText(text);
+
+    scope.appendTo(document.querySelector(".header-logo"));
   });
-
-  let material = new window.Blotter.LiquidDistortMaterial();
-
-  let blotter = new Blotter(material, { texts: text });
-
-  material.uniforms.uSpeed.value = 0.1;
-  material.uniforms.uVolatility.value = 0.1;
-  let scope = blotter.forText(text);
-
-  scope.appendTo(document.querySelector(".header-logo"));
-});
+}
 
 function customCursorMove(event) {
   console.log("customCursor");

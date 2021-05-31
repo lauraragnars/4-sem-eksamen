@@ -68,6 +68,12 @@
       .artists li {
         border-bottom: 1px solid black;
         padding-bottom: 1px;
+        transition: color 0.3s;
+
+        &:hover {
+          color: rgb(139, 139, 139);
+          transition: color 0.3s;
+        }
       }
 
       .time li {
