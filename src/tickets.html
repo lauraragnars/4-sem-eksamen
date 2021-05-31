@@ -5,15 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://use.typekit.net/sxe1kwu.css" />
-    <!-- <script src="blotter/blotter.min.js"></script>
-    <script src="blotter/liquidDistortMaterial.js"></script> -->
     <link rel="stylesheet" href="../sass/main.scss" />
+    <link rel="stylesheet" href="/sass/typography.css" />
+    <script crossorigin src="https://raw.githack.com/bradley/Blotter/master/build/blotter.min.js"></script>
+    <script src="https://raw.githack.com/bradley/Blotter/master/build/materials/liquidDistortMaterial.js"></script>
+    <script src="https://raw.githack.com/bradley/Blotter/master/build/materials/rollingDistortMaterial.js"></script>
+
     <title>Distortion Ø - Tickets</title>
   </head>
-  <body id="tickets-body">
+  <body>
+    <div id="tickets-body" class="body-container">
     <header>
-      <div class="header-logo"></div>
+      <a href="index.html">
+        <div class="header-logo"></div>
+      </a>
+      <div class="burger-menu">
+        <div class="burger-menu-icon cursor-link">
+          <img class="burger-menu-svg" src="/assets/menu.svg" alt="Burger menu icon" />
+          <h3 class="burger-menu-text">Menu</h3>
+        </div>
+        <nav class="burger-nav">
+          <ul>
+            <li><a class="cursor-link-big" href="index.html">Home</a></li>
+            <li><a class="cursor-link-big" href="artists.html">Artists</a></li>
+            <li><a class="cursor-link-big" href="tickets.html">Tickets</a></li>
+            <li><a class="cursor-link-big" href="program.html">Program</a></li>
+            <li><a class="cursor-link-big" href="merch.html">Merch</a></li>
+            <li><a class="cursor-link-big" href="practical-info.html">Practical Info</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
+
+    <main>
+      <h1></h1>
+<section id="tickets-container"></section>
+<section id="ticket-info">
+  <div class="black-banner-top"></div>
+  <div class="info">
+    <p class="refund"></p>
+    <p class="day-tickets"></p>
+    <p class="other-info"></p>
+  </div>
+
+</section>
+
+
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo"><img src="/assets/distortion_logo.png" alt="Distortion logo" /></div>
+      </div>
+    </footer>
+    <div class="custom-cursor"></div>
+    </div>
+    <template>
+ 
+      <article>
+        <h3 class="ticket-type"></h3>
+        <p class="desc"></p>
+        <a class="ticket-link cursor-link" href="#"></a>
+        <h4 class="age"></h4>
+        <p class="price"></p>
+        <button class="button ticket-button cursor-link"></button>
+      </article>
+
+    </template>
   </body>
+
+  <script src="tickets.js"></script>
   <script src="main.js"></script>
 </html>
