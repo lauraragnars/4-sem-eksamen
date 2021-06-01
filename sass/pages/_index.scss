@@ -14,6 +14,12 @@
     }
   }
 
+  #headliners {
+    width: 70vw;
+    margin-left: 15vw;
+    margin-bottom: 40px;
+  }
+
   .pink-banner {
     background-image: url("/assets/pink_banner.svg");
     width: 100vw;
@@ -88,7 +94,7 @@
     margin: 0 auto;
     justify-content: center;
     align-content: center;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
     a {
       text-decoration: none;
     }

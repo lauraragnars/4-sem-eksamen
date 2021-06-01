@@ -33,24 +33,15 @@ function showData(data) {
 
   allStores.forEach((store) => {
     let li = document.createElement("li");
-
-    store.fields.storeName.toUpperCase();
-
-    li.textContent = `${store.fields.storeName},`;
-    li.textContent += ` ${store.fields.address}`;
-    // }
-
+    li.textContent = `${store.fields.storeName.toUpperCase()},  ${store.fields.address} `;
     list.append(li);
   });
 }
 
 function showData3(data) {
-  //   console.log(data);
-
   const allMerch = data.items;
 
   let container = document.querySelector(".merch-container");
-  //   container.innerHTML = "";
   let merchTemplate = document.querySelector("template");
 
   allMerch.forEach((merch) => {
