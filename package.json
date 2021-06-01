@@ -21,6 +21,7 @@
   "homepage": "https://github.com/lauraragnars/4-sem-eksamen#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "@parcel/transformer-webmanifest": "^2.0.0-beta.2",
     "parcel": "^2.0.0-beta.2",
     "sass": "^1.32.13"
   }

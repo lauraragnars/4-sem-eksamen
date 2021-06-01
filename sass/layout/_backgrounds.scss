@@ -13,7 +13,13 @@
 #index-body {
   background-color: $color-background-1;
   //background-color: $color-background-7;
+  background-position-x: center;
+
   background-image: url("/background_images/glitch_6_c.jpg");
+
+  @media (min-width: 768px) {
+    background-position-x: left;
+  }
 }
 
 #program-body {

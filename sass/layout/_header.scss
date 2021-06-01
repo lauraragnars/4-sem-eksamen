@@ -10,6 +10,34 @@
   z-index: 3;
 }
 
+.header-text-1 {
+  position: fixed;
+  top: 43px;
+  left: 105px;
+  color: white;
+  mix-blend-mode: difference;
+  font-size: 1rem;
+  font-family: fenwick, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  z-index: 5;
+}
+
+.header-text-2 {
+  position: fixed;
+  top: 140px;
+  left: 15px;
+  color: white;
+  font-size: 1rem;
+  z-index: 5;
+  mix-blend-mode: difference;
+  font-family: fenwick, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
 .burger-nav {
   position: fixed;
   z-index: 2;
