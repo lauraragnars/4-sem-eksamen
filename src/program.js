@@ -46,24 +46,34 @@ function showData(data) {
       // first only select the artists that correspond to the right scene
       if (artist.fields.scene.toLowerCase() === scene.toLowerCase()) {
         // then check which day they're playing
+
+        // Artists for friday
         if (artist.fields.day === "Friday") {
           let name = document.createElement("li");
           let time = document.createElement("li");
+
           name.textContent = artist.fields.artistName;
           time.textContent = artist.fields.time;
+
           name.addEventListener("click", () => {
             location.href = "artist.html?id=" + artist.sys.id;
           });
+
           clone.querySelector(".friday .artists").append(name);
           clone.querySelector(".friday .time").append(time);
+
+          // Artists for Saturday
         } else if (artist.fields.day === "Saturday") {
           let name = document.createElement("li");
           let time = document.createElement("li");
+
           name.textContent = artist.fields.artistName;
           time.textContent = artist.fields.time;
+
           name.addEventListener("click", () => {
             location.href = "artist.html?id=" + artist.sys.id;
           });
+
           clone.querySelector(".saturday .artists").append(name);
           clone.querySelector(".saturday .time").append(time);
         }

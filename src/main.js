@@ -20,18 +20,17 @@ if ("fonts" in document) {
 
 window.addEventListener("load", start);
 
-// burger menu
 function start() {
   console.log("start");
 
   blotter();
 
-  // show data at load
-  //loadJSON(link, showData);
-
   // event listeners
+
   // burger menu
-  document.querySelector(".burger-menu-icon").addEventListener("click", toggleBurgerMenu);
+  document
+    .querySelector(".burger-menu-icon")
+    .addEventListener("click", toggleBurgerMenu);
 
   // custom cursor
   document.addEventListener("mousemove", customCursorMove);
@@ -89,7 +88,6 @@ function toggle(elm) {
 
 function blotter() {
   document.fonts.ready.then(function () {
-    console.log(document.fonts);
     let text = new Blotter.Text("Ø", {
       family: "Pilowlava-Regular",
       size: 70,
@@ -97,7 +95,6 @@ function blotter() {
     });
 
     let material = new window.Blotter.LiquidDistortMaterial();
-
     let blotter = new Blotter(material, { texts: text });
 
     material.uniforms.uSpeed.value = 0.1;
