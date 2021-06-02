@@ -32,7 +32,8 @@ function showData(data) {
   console.log(data);
 
   document.querySelector(".artist-name").textContent = data.fields.artistName;
-  document.querySelector(".artist-info").textContent = data.fields.day + " / " + data.fields.scene + " / " + data.fields.time;
+  document.querySelector(".artist-info").textContent =
+    data.fields.day + " / " + data.fields.scene + " / " + data.fields.time;
   //   https://open.spotify.com/embed/track/
   if (data.fields.spotifyTrackLink) {
     document.querySelector("iframe").src = data.fields.spotifyTrackLink;
@@ -65,14 +66,19 @@ function showData(data) {
   }
 
   const assetID = data.fields.artistPhoto.sys.id;
-
   const imgLink = `https://cdn.contentful.com/spaces/${spaceID}/environments/master/assets/${assetID}?access_token=${accessToken}`;
 
-  loadJSON(imgLink, showImage);
+  if (assetID) {
+    loadJSON(imgLink, showImage);
+  } else {
+    document.querySelector(".artist-photo").style.backgroundColor = "black";
+  }
 }
 
 function showImage(data) {
   console.log(data);
 
-  document.querySelector(".artist-photo").style.backgroundImage = `url(${data.fields.file.url})`;
+  document.querySelector(
+    ".artist-photo"
+  ).style.backgroundImage = `url(${data.fields.file.url})`;
 }
