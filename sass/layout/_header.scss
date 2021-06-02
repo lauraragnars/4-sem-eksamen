@@ -2,40 +2,39 @@
 
 .burger-menu-svg {
   mix-blend-mode: difference;
-  width: 4rem;
+  width: 3.2rem;
   position: fixed;
-  right: 1.5rem;
-  top: 1.5rem;
+  right: 1.2rem;
+  top: 1.2rem;
   transition: 0.3s ease-out;
   z-index: 3;
+
+  @media (min-width: 768px) {
+    width: 4rem;
+    right: 1.5rem;
+    top: 1.5rem;
+  }
 }
 
-.header-text-1 {
+.header-text {
   position: fixed;
-  top: 43px;
-  left: 105px;
+  top: 36px;
+  left: 90px;
   color: white;
   mix-blend-mode: difference;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-family: fenwick, sans-serif;
   font-weight: 300;
   font-style: normal;
+  line-height: 0.45rem;
   z-index: 5;
-}
 
-.header-text-2 {
-  position: fixed;
-  top: 140px;
-  left: 15px;
-  color: white;
-  font-size: 1rem;
-  z-index: 5;
-  mix-blend-mode: difference;
-  font-family: fenwick, sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  transform: rotate(90deg);
-  transform-origin: center;
+  @media (min-width: 768px) {
+    top: 45px;
+    left: 105px;
+    font-size: 1rem;
+    line-height: 0.6rem;
+  }
 }
 
 .burger-nav {
@@ -115,13 +114,19 @@ header .open {
   font-weight: 400;
   font-style: normal;
   position: fixed;
-  right: 2.3rem;
-  top: 3.3rem;
+  right: 1.8rem;
+  top: 2.6rem;
   z-index: 4;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   transition: 0.3s;
   color: $white;
   mix-blend-mode: difference;
+
+  @media (min-width: 768px) {
+    right: 2.3rem;
+    top: 3.3rem;
+    font-size: 0.7rem;
+  }
 }
 
 .burger-menu-icon {
@@ -134,4 +139,14 @@ header .open {
   top: 0.5rem;
   left: 1.5rem;
   z-index: 5;
+
+  .b-canvas {
+    width: 50px !important;
+    height: auto !important;
+
+    @media (min-width: 768px) {
+      width: 60px !important;
+      height: auto !important;
+    }
+  }
 }

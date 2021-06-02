@@ -39,7 +39,19 @@ function start() {
     elm.addEventListener("mouseleave", onMouseLeave);
   });
 
-  document.querySelectorAll(".program-module .artists li").forEach((elm) => {
+  document.querySelectorAll(".cursor-link-big").forEach((elm) => {
+    elm.addEventListener("mouseover", onMouseOverB);
+    elm.addEventListener("mouseleave", onMouseLeaveB);
+  });
+
+  setTimeout(mouseListen, 2000);
+}
+
+function mouseListen() {
+  console.log("mouse listen");
+  // custom cursor
+  document.addEventListener("mousemove", customCursorMove);
+  document.querySelectorAll(".cursor-link").forEach((elm) => {
     elm.addEventListener("mouseover", onMouseOver);
     elm.addEventListener("mouseleave", onMouseLeave);
   });

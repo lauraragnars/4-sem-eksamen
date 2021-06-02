@@ -16,8 +16,28 @@
 
   #headliners {
     width: 70vw;
-    margin-left: 15vw;
-    margin-bottom: 40px;
+    margin: 60px auto 60px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+
+    .headliner-item {
+      flex-basis: 300px;
+      flex-grow: 1;
+      color: white;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      font-family: fenwick, sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      text-align: center;
+
+      @media (min-width: 768px) {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+    }
   }
 
   .pink-banner {

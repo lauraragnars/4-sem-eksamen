@@ -4,28 +4,30 @@ import { accessToken, spaceID } from "../config/contentful";
 
 const entryID = "7k6leOigNpIaVOJ3Nf9Mrb";
 const link = `https://cdn.contentful.com/spaces/${spaceID}/environments/master/entries/${entryID}?access_token=${accessToken}`;
-
-if ("fonts" in document) {
-  let font = new FontFace(
-    "Pilowlava-Regular",
-    "url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff2) format('woff2'), url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff2) format('woff')"
-  );
-
-  Promise.all([font.load()]).then(function (loadedFonts) {
-    // Render them at the same time
-    loadedFonts.forEach(function (font) {
-      document.fonts.add(font);
-    });
-  });
-}
+const artistsLink = `https://cdn.contentful.com/spaces/${spaceID}/environments/master/entries?access_token=${accessToken}&content_type=individualArtist`;
 
 window.addEventListener("load", start);
 
 function start() {
   console.log("start");
 
+  if ("fonts" in document) {
+    let font = new FontFace(
+      "Pilowlava-Regular",
+      "url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff2) format('woff2'), url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff2) format('woff')"
+    );
+
+    Promise.all([font.load()]).then(function (loadedFonts) {
+      // Render them at the same time
+      loadedFonts.forEach(function (font) {
+        document.fonts.add(font);
+      });
+    });
+  }
+
   // show data at load
   loadJSON(link, showData);
+  loadJSON(artistsLink, showHeadliners);
 
   countdown();
   animateText();
@@ -46,6 +48,27 @@ function showData(data) {
   document.querySelector(".about-text-header").textContent =
     data.fields.aboutHeader;
   document.querySelector(".about-text").textContent = data.fields.aboutText;
+}
+
+function showHeadliners(data) {
+  console.log("show headliners", data);
+
+  data.items.forEach((artist) => {
+    if (artist.fields.isHeadliner === true) {
+      console.log(artist.fields.artistName);
+
+      let div = document.createElement("div");
+      div.classList.add("headliner-item");
+      div.classList.add("cursor-link");
+      div.textContent = artist.fields.artistName;
+
+      div.addEventListener("click", () => {
+        location.href = "artist.html?id=" + artist.sys.id;
+      });
+
+      document.querySelector("#headliners").append(div);
+    }
+  });
 }
 
 function countdown() {
@@ -90,14 +113,5 @@ function animateText() {
     let scope = blotter.forText(text);
 
     scope.appendTo(elem);
-
-    // adjustCanvas();
   });
 }
-
-// function adjustCanvas() {
-//   const canvas = document.querySelector(".splash-text .b-canvas");
-//   canvas.setAttribute("height", "400");
-//   canvas.setAttribute("width", "800");
-//   console.log(canvas);
-// }
