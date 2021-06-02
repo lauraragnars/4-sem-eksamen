@@ -15,15 +15,24 @@ footer {
     display: flex;
   }
 
+  .footer-flex {
+    width: 100vw;
+    padding: 0 45px;
+    margin: 0 auto;
+    justify-content: space-between;
+    position: relative;
+    top: 250px;
+  }
+
   .images img {
     height: 50px;
     width: auto;
   }
 
   .footer-logo {
-    position: relative;
-    bottom: -220px;
-    left: 60px;
+    // position: relative;
+    // bottom: -220px;
+    // left: 60px;
     img {
       width: 90px;
     }

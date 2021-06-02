@@ -43,17 +43,30 @@
     width: 300px;
     height: 400px;
 
-    img {
-      padding: 10px;
-      margin-left: 10px;
+    a {
+      color: black;
+      text-decoration: none;
     }
+
+    // img {
+    //   height: 40px;
+    //   width: au;
+    // }
     p {
       text-align: center;
       margin-left: 15px;
+      letter-spacing: -0.5px;
+      font-weight: 400;
+    }
+
+    .title {
+      font-size: 0.9rem;
+      margin-top: 10px;
     }
 
     .price {
       text-transform: uppercase;
+      font-size: 0.8rem;
     }
   }
 
@@ -61,7 +74,7 @@
     grid-column: 1/2;
     grid-row: 1/2;
     justify-self: end;
-    transform: scale(0.8);
+    // transform: scale(0.8);
     align-self: end;
     margin-right: 0px;
     margin-bottom: -120px;
@@ -73,6 +86,11 @@
     justify-self: end;
     margin-right: -130px;
     margin-top: 50px;
+
+    img {
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
   }
 
   article:nth-child(3) {
