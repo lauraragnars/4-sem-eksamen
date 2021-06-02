@@ -1,13 +1,15 @@
 footer {
   width: 100%;
-  height: 330px;
+  height: 380px;
   position: absolute;
   bottom: 0;
 
-  background-image: url("/assets/footer_blob.svg");
+  background-image: url("/assets/footer_bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
+  background-position-y: top;
+  background-size: 110%;
 
   .flex {
     display: flex;
@@ -18,14 +20,10 @@ footer {
     width: auto;
   }
 
-  // @media (min-width: 768px) {
-  //   background-size: 150%;
-  // }
-
   .footer-logo {
-    // position: relative;
-    // bottom: -180px;
-    // left: 40px;
+    position: relative;
+    bottom: -220px;
+    left: 60px;
     img {
       width: 90px;
     }

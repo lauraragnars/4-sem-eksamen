@@ -72,7 +72,7 @@ function showHeadliners(data) {
 }
 
 function countdown() {
-  const countDownDate = new Date("Jun 4, 2021 16:00:00").getTime();
+  const countDownDate = new Date("Jun 4, 2022 16:00:00").getTime();
 
   const myfunc = setInterval(function () {
     let now = new Date().getTime();
