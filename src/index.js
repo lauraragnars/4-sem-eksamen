@@ -85,10 +85,10 @@ function countdown() {
     const minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
-    document.querySelector(".days").textContent = days + "d ";
-    document.querySelector(".hours").textContent = hours + "h ";
-    document.querySelector(".mins").textContent = minutes + "m ";
-    document.querySelector(".secs").textContent = seconds + "s";
+    document.querySelector(".days").textContent = days;
+    document.querySelector(".hours").textContent = hours;
+    document.querySelector(".mins").textContent = minutes;
+    document.querySelector(".secs").textContent = seconds;
   }, 1000);
 }
 
