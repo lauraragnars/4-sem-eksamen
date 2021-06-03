@@ -18,6 +18,20 @@ if ("fonts" in document) {
   });
 }
 
+// if ("fonts" in document) {
+//   let font = new FontFace(
+//     "Pilowlava-Regular",
+//     "url(/assets/Pilowlava-Regular.woff2) format('woff2'), url(/assets/Pilowlava-Regular.woff) format('woff')"
+//   );
+
+//   Promise.all([font.load()]).then(function (loadedFonts) {
+//     // Render them at the same time
+//     loadedFonts.forEach(function (font) {
+//       document.fonts.add(font);
+//     });
+//   });
+// }
+
 window.addEventListener("load", start);
 
 function start() {
