@@ -12,6 +12,9 @@
       width: 35vw;
     }
   }
+  h1 {
+    margin-bottom: 40px;
+  }
 
   .white-banner-top {
     background-image: url("/assets/white_banner_top.svg");
@@ -33,7 +36,7 @@
 
   .white-banner-content {
     background-color: white;
-    padding: 100px 0;
+    padding: 20px 0 100px 0;
     width: 100vw;
     height: auto;
   }
@@ -64,7 +67,14 @@
       font-style: normal;
     }
   }
+  .wave-top,
+  .wave-bottom {
+    background-image: url("/assets/wave_2_w.svg");
+  }
 
+  .wave-bottom {
+    margin-bottom: 150px;
+  }
   .container {
     position: relative;
     overflow: hidden;

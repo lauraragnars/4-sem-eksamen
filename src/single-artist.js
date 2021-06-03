@@ -66,15 +66,15 @@ function showData(data) {
   }
 
   if (
-    data.fields.spotifyLink &&
-    data.fields.soundCloudLink &&
-    data.fields.instagramLink &&
+    data.fields.spotifyLink ||
+    data.fields.soundCloudLink ||
+    data.fields.instagramLink ||
     data.fields.facebookLink
   ) {
     console.log("some link are there");
   } else {
-    console.log("no link");
-    document.querySelector(".some-text").style.display = "none";
+    console.log("no links");
+    document.querySelector(".explore-text").style.display = "none";
   }
 
   if (data.fields.artistPhoto) {

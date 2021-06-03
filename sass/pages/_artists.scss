@@ -5,29 +5,13 @@
     fill: black;
   }
 
-  .white-banner-top {
-    background-image: url("/assets/white_banner_top.svg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: top;
-    width: 100vw;
-    height: 3vw;
-    // opacity: 0.9;
-  }
-
-  .white-banner-bottom {
-    background-image: url("/assets/white_banner_bottom.svg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: top;
-    width: 100vw;
-    height: 5vw;
-    // opacity: 0.9;
+  h1 {
+    margin-bottom: 40px;
   }
 
   .white-banner-content {
     background-color: white;
-    padding: 70px 0 100px 0;
+    padding: 40px 0 100px 0;
     width: 100vw;
     height: auto;
     // opacity: 0.9;
@@ -55,6 +39,15 @@
         flex-basis: auto;
       }
     }
+  }
+
+  .wave-top,
+  .wave-bottom {
+    background-image: url("/assets/wave_2_w.svg");
+  }
+
+  .wave-bottom {
+    margin-bottom: 150px;
   }
 
   .search-box {

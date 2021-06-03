@@ -1,3 +1,5 @@
+@import "../base/variables";
+
 #index-body {
   .splash-text {
     text-align: center;
@@ -40,16 +42,25 @@
     }
   }
 
-  .pink-banner {
-    background-image: url("/assets/pink_banner.svg");
-    width: 100vw;
-    height: 450px;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+  // .pink-banner {
+  //   background-image: url("/assets/pink_banner.svg");
+  //   width: 100vw;
+  //   height: 450px;
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
+  // }
 
   .video-section {
     margin: 150px 0;
+    margin-bottom: 210px;
+
+    @media (min-width: 968px) {
+      margin-bottom: -110px;
+    }
+
+    @media (min-width: 2000px) {
+      margin-bottom: -150px;
+    }
 
     .video-container {
       width: 100%;
@@ -62,7 +73,7 @@
       margin-left: -450px;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 968px) {
       .video-container {
         all: revert;
       }
@@ -98,12 +109,27 @@
     }
   }
 
+  .wave-top {
+    background-image: url("/assets/wave_bottom_p_2.svg");
+  }
+
+  .wave-bottom {
+    background-image: url("/assets/wave_bottom_p_2.svg");
+  }
+
   .about-section {
-    padding-top: 100px;
+    // padding-top: 100px;
+
+    background-color: $light-pink;
+    padding: 100px 15vw;
 
     @media (min-width: 768px) {
-      padding-top: 130px;
+      padding: 100px 15vw 200px 15vw;
     }
+
+    // @media (min-width: 768px) {
+    //   padding-top: 130px;
+    // }
   }
 
   .countdown-section {
@@ -174,6 +200,12 @@
         width: 17.5vw;
       }
 
+      p {
+        font-size: 5rem;
+      }
+    }
+
+    @media (min-width: 1390px) {
       p {
         font-size: 8rem;
       }
