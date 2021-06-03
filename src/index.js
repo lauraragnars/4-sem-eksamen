@@ -11,19 +11,19 @@ window.addEventListener("load", start);
 function start() {
   console.log("start");
 
-  if ("fonts" in document) {
-    let font = new FontFace(
-      "Pilowlava-Regular",
-      "url(/__/fonts/Pilowlava-Regular.woff2) format('woff2'), url(/__/fonts/Pilowlava-Regular.woff) format('woff')"
-    );
+  // if ("fonts" in document) {
+  //   let font = new FontFace(
+  //     "Pilowlava-Regular",
+  //     "url(/__/fonts/Pilowlava-Regular.woff2) format('woff2'), url(/__/fonts/Pilowlava-Regular.woff) format('woff')"
+  //   );
 
-    Promise.all([font.load()]).then(function (loadedFonts) {
-      // Render them at the same time
-      loadedFonts.forEach(function (font) {
-        document.fonts.add(font);
-      });
-    });
-  }
+  //   Promise.all([font.load()]).then(function (loadedFonts) {
+  //     // Render them at the same time
+  //     loadedFonts.forEach(function (font) {
+  //       document.fonts.add(font);
+  //     });
+  //   });
+  // }
 
   // if ("fonts" in document) {
   //   let font = new FontFace(
