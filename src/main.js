@@ -7,7 +7,7 @@
 if ("fonts" in document) {
   let font = new FontFace(
     "Pilowlava-Regular",
-    "url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff2) format('woff2'), url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff2) format('woff')"
+    "url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff2) format('woff2'), url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff) format('woff')"
   );
 
   Promise.all([font.load()]).then(function (loadedFonts) {
