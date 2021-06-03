@@ -8,6 +8,7 @@
     display: grid;
     grid-template-columns: 45% 55%;
     grid-template-rows: 1fr 1fr;
+    overflow-x: hidden;
 
     @media (max-width: 968px) {
       display: block;
@@ -50,6 +51,7 @@
     padding: 50px 50px;
     width: 300px;
     height: 400px;
+    overflow-x: hidden;
 
     @media (max-width: 968px) {
       margin: 30px auto;
