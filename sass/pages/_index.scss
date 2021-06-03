@@ -52,8 +52,8 @@
   // }
 
   .video-section {
-    margin: 150px 0;
-    margin-bottom: 210px;
+    margin: 150px 0 -200px 0;
+    //margin-bottom: 210px;
 
     @media (min-width: 968px) {
       margin-bottom: -110px;
@@ -71,7 +71,7 @@
     }
 
     video {
-      margin-left: -450px;
+      margin-left: -200px;
     }
 
     @media (min-width: 968px) {

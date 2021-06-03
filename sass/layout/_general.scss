@@ -7,8 +7,15 @@
   }
 }
 
+// main {
+//   padding-bottom: 330px;
+// }
+
 main {
-  padding-bottom: 330px;
+  padding-bottom: 800px;
+  @media (min-width: 968px) {
+    padding-bottom: 330px;
+  }
 }
 
 .hide {

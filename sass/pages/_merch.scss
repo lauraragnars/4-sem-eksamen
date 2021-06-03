@@ -87,12 +87,12 @@
     }
   }
 
-  main {
-    margin-bottom: 500px;
-    @media (min-width: 968px) {
-      margin-bottom: 0;
-    }
-  }
+  // main {
+  //   margin-bottom: 500px;
+  //   @media (min-width: 968px) {
+  //     margin-bottom: 0;
+  //   }
+  // }
 
   article:nth-child(4) {
     grid-column: 1/2;

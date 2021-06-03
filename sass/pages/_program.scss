@@ -10,6 +10,13 @@
     margin-bottom: 150px;
   }
 
+  main {
+    padding-bottom: 400px;
+    @media (min-width: 968px) {
+      padding-bottom: 330px;
+    }
+  }
+
   .program-module-container {
     margin-bottom: -340px;
 

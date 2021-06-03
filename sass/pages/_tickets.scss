@@ -24,23 +24,17 @@
   }
 
   #tickets-container {
-    max-width: 80vw;
+    // max-width: 80vw;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 20px;
+    overflow-x: hidden;
     // isolation: isolate;
 
     @media (max-width: 968px) {
       display: block;
-    }
-  }
-
-  main {
-    margin-bottom: 500px;
-    @media (min-width: 968px) {
-      margin-bottom: 0;
     }
   }
 
