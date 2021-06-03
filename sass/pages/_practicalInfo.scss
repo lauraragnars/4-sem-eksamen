@@ -99,7 +99,8 @@
     margin: 0 0 1rem;
     color: white;
     padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.308);
+    background-color: rgba(0, 0, 0, 0.11);
+    backdrop-filter: blur(10px);
 
     font-family: fenwick, sans-serif;
     font-weight: 300;
