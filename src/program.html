@@ -141,25 +141,29 @@
     </div>
 
     <template>
-      <article class="program-module">
-        <h2 class="scene-title"></h2>
-        <div class="scene-container flex">
-          <div class="day friday">
-            <h3>Friday</h3>
-            <div class="flex">
-              <ul class="artists"></ul>
-              <ul class="time"></ul>
+      <div class="program-module-container">
+        <div class="wave-top"></div>
+        <article class="program-module">
+          <h2 class="scene-title"></h2>
+          <div class="scene-container flex">
+            <div class="day friday">
+              <h3>Friday</h3>
+              <div class="flex">
+                <ul class="artists"></ul>
+                <ul class="time"></ul>
+              </div>
+            </div>
+            <div class="day saturday">
+              <h3>Saturday</h3>
+              <div class="flex">
+                <ul class="artists"></ul>
+                <ul class="time"></ul>
+              </div>
             </div>
           </div>
-          <div class="day saturday">
-            <h3>Saturday</h3>
-            <div class="flex">
-              <ul class="artists"></ul>
-              <ul class="time"></ul>
-            </div>
-          </div>
-        </div>
-      </article>
+        </article>
+        <div class="wave-bottom"></div>
+      </div>
     </template>
     <script src="program.js"></script>
     <script src="main.js"></script>

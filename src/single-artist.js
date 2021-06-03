@@ -65,8 +65,23 @@ function showData(data) {
     document.querySelector(".spotify").style.display = "none";
   }
 
-  const assetID = data.fields.artistPhoto.sys.id;
-  const imgLink = `https://cdn.contentful.com/spaces/${spaceID}/environments/master/assets/${assetID}?access_token=${accessToken}`;
+  if (
+    data.fields.spotifyLink &&
+    data.fields.soundCloudLink &&
+    data.fields.instagramLink &&
+    data.fields.facebookLink
+  ) {
+    console.log("some link are there");
+  } else {
+    console.log("no link");
+    document.querySelector(".some-text").style.display = "none";
+  }
+
+  if (data.fields.artistPhoto) {
+    const assetID = data.fields.artistPhoto.sys.id;
+    const imgLink = `https://cdn.contentful.com/spaces/${spaceID}/environments/master/assets/${assetID}?access_token=${accessToken}`;
+    loadJSON(imgLink, showImage);
+  }
 
   document.querySelector(".artist-photo").style.backgroundColor = "#E8E2FF";
 }

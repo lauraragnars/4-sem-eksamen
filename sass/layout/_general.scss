@@ -30,6 +30,20 @@ li {
   // text-align: left;
 }
 
+.wave-top,
+.wave-bottom {
+  width: 100vw;
+  // background-image: url("/assets/wave_top.svg");
+  height: 110px;
+  background-size: contain 110%;
+  background-position-y: top;
+  background-repeat: no-repeat;
+}
+
+.wave-bottom {
+  transform: rotate(180deg);
+}
+
 h1 {
   font-size: 3rem;
   padding-top: 150px;

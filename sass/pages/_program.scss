@@ -10,23 +10,49 @@
     margin-bottom: 150px;
   }
 
+  .program-module-container {
+    margin-bottom: -340px;
+    &:nth-child(even) {
+      .wave-top {
+        background-image: url("/assets/wave_top.svg");
+      }
+
+      // .wave-top,
+      // .wave-bottom {
+      //   background-image: url("/assets/wave_pink.svg");
+      // }
+
+      .program-module {
+        background-color: white;
+      }
+    }
+
+    &:nth-child(odd) {
+      .wave-top {
+        background-image: url("/assets/wave_pink.svg");
+      }
+
+      .program-module {
+        background-color: $light-pink;
+      }
+    }
+
+    &:nth-child(5) {
+      .wave-bottom {
+        background-image: url("/assets/wave_pink.svg");
+      }
+    }
+  }
+
   .program-module {
     width: 100vw;
-    padding: 10vw 10vw;
+    padding: 10vw 10vw 300px 10vw;
     // margin-bottom: 50px;
     color: black;
 
     @media (min-width: 768px) {
       width: 100vw;
-      padding: 70px 15vw 100px 15vw;
-    }
-
-    &:nth-child(even) {
-      background-color: $light-pink;
-    }
-
-    &:nth-child(odd) {
-      background-color: white;
+      padding: 70px 15vw 300px 15vw;
     }
 
     .flex {
@@ -68,12 +94,12 @@
       .artists li {
         border-bottom: 1px solid black;
         padding-bottom: 1px;
-        transition: color 0.3s;
+        // transition: color 0.3s;
 
-        &:hover {
-          color: rgb(139, 139, 139);
-          transition: color 0.3s;
-        }
+        // &:hover {
+        //   color: rgb(139, 139, 139);
+        //   transition: color 0.3s;
+        // }
       }
 
       .time li {

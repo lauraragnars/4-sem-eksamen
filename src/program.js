@@ -40,7 +40,7 @@ function showData(data) {
 
   scener.forEach((scene) => {
     let clone = template.cloneNode(true).content;
-    clone.querySelector(".scene-title").textContent = scene + "scene";
+    clone.querySelector(".scene-title").textContent = scene + " scene";
 
     data.items.forEach((artist) => {
       // first only select the artists that correspond to the right scene
@@ -54,6 +54,9 @@ function showData(data) {
 
           name.textContent = artist.fields.artistName;
           time.textContent = artist.fields.time;
+
+          time.classList.add("cursor-link");
+          name.classList.add("cursor-link");
 
           name.addEventListener("click", () => {
             location.href = "artist.html?id=" + artist.sys.id;
@@ -69,6 +72,9 @@ function showData(data) {
 
           name.textContent = artist.fields.artistName;
           time.textContent = artist.fields.time;
+
+          time.classList.add("cursor-link");
+          name.classList.add("cursor-link");
 
           name.addEventListener("click", () => {
             location.href = "artist.html?id=" + artist.sys.id;
