@@ -11,24 +11,10 @@ window.addEventListener("load", start);
 function start() {
   console.log("start");
 
-  // if ("fonts" in document) {
-  //   let font = new FontFace(
-  //     "Pilowlava-Regular",
-  //     "url(/fonts/Pilowlava-Regular.woff2) format('woff2'), url(/fonts/Pilowlava-Regular.woff) format('woff')"
-  //   );
-
-  //   Promise.all([font.load()]).then(function (loadedFonts) {
-  //     // Render them at the same time
-  //     loadedFonts.forEach(function (font) {
-  //       document.fonts.add(font);
-  //     });
-  //   });
-  // }
-
   if ("fonts" in document) {
     let font = new FontFace(
       "Pilowlava-Regular",
-      "url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff2) format('woff2'), url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff) format('woff')"
+      "url(/__/fonts/Pilowlava-Regular.woff2) format('woff2'), url(/__/fonts/Pilowlava-Regular.woff) format('woff')"
     );
 
     Promise.all([font.load()]).then(function (loadedFonts) {
@@ -38,6 +24,20 @@ function start() {
       });
     });
   }
+
+  // if ("fonts" in document) {
+  //   let font = new FontFace(
+  //     "Pilowlava-Regular",
+  //     "url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff2) format('woff2'), url(https://lauraragnars.dk/fonts/Pilowlava-Regular.woff) format('woff')"
+  //   );
+
+  //   Promise.all([font.load()]).then(function (loadedFonts) {
+  //     // Render them at the same time
+  //     loadedFonts.forEach(function (font) {
+  //       document.fonts.add(font);
+  //     });
+  //   });
+  // }
 
   // show data at load
   loadJSON(link, showData);

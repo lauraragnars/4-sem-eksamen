@@ -9,6 +9,7 @@ window.addEventListener("load", start);
 
 let currentFilter = "*";
 let allArtists;
+let searchInput;
 
 function start() {
   console.log("start");
@@ -19,6 +20,10 @@ function start() {
   document.querySelectorAll(".filter").forEach((button) => {
     button.addEventListener("click", setFilter);
   });
+
+  document
+    .querySelector("#artists-search")
+    .addEventListener("input", searchList);
 }
 
 // loads data
@@ -28,6 +33,12 @@ function loadJSON(url, callback) {
     .then((jsonData) => {
       callback(jsonData);
     });
+}
+
+function searchList(e) {
+  console.log("search ist");
+  searchInput = e.target.value;
+  showData();
 }
 
 function setData(data) {
@@ -51,17 +62,33 @@ function showData() {
   console.log(allArtists);
   let filteredList;
 
-  if (currentFilter === "*") {
-    filteredList = allArtists;
+  if (searchInput) {
+    filteredList = allArtists.filter(filterListBySearch);
   } else {
-    console.log("filter lis");
-    filteredList = allArtists.filter(filterList);
+    filteredList = allArtists;
   }
 
-  // sort the artists, so the headliners are first
+  if (currentFilter === "*") {
+    filteredList = filteredList;
+  } else {
+    filteredList = filteredList.filter(filterList);
+  }
+
   filteredList.sort(function (a, b) {
-    return a.fields.isHeadliner - b.fields.isHeadliner;
+    if (a.fields.hasOwnProperty("isHeadliner")) {
+      return -1;
+    } else if (b.fields.hasOwnProperty("isHeadliner")) {
+      return 1;
+    }
   });
+
+  // filteredList.sort(function (a, b) {
+  //   return a.fields.hasOwnProperty("isHeadliner")
+  //     ? -1
+  //     : b.fields.hasOwnProperty("isHeadliner")
+  //     ? 1
+  //     : 0;
+  // });
 
   filteredList.forEach((artist) => {
     let li = document.createElement("li");
@@ -93,5 +120,15 @@ function filterList(artist) {
     } else {
       return false;
     }
+  }
+}
+
+function filterListBySearch(artist) {
+  if (
+    artist.fields.artistName.toLowerCase().includes(searchInput.toLowerCase())
+  ) {
+    return true;
+  } else {
+    return false;
   }
 }

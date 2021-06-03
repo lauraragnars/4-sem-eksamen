@@ -68,11 +68,7 @@ function showData(data) {
   const assetID = data.fields.artistPhoto.sys.id;
   const imgLink = `https://cdn.contentful.com/spaces/${spaceID}/environments/master/assets/${assetID}?access_token=${accessToken}`;
 
-  if (assetID) {
-    loadJSON(imgLink, showImage);
-  } else {
-    document.querySelector(".artist-photo").style.backgroundColor = "black";
-  }
+  document.querySelector(".artist-photo").style.backgroundColor = "#E8E2FF";
 }
 
 function showImage(data) {

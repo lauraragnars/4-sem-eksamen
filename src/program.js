@@ -40,7 +40,7 @@ function showData(data) {
 
   scener.forEach((scene) => {
     let clone = template.cloneNode(true).content;
-    clone.querySelector(".scene-title").textContent = scene;
+    clone.querySelector(".scene-title").textContent = scene + "scene";
 
     data.items.forEach((artist) => {
       // first only select the artists that correspond to the right scene
