@@ -35,22 +35,20 @@ function start() {
     .querySelector(".burger-menu-icon")
     .addEventListener("click", toggleBurgerMenu);
 
-  if (width > 768) {
-    console.log("mobile");
-    // custom cursor
-    document.addEventListener("mousemove", customCursorMove);
-    document.querySelectorAll(".cursor-link").forEach((elm) => {
-      elm.addEventListener("mouseover", onMouseOver);
-      elm.addEventListener("mouseleave", onMouseLeave);
-    });
+  console.log("mobile");
+  // custom cursor
+  document.addEventListener("mousemove", customCursorMove);
+  document.querySelectorAll(".cursor-link").forEach((elm) => {
+    elm.addEventListener("mouseover", onMouseOver);
+    elm.addEventListener("mouseleave", onMouseLeave);
+  });
 
-    document.querySelectorAll(".cursor-link-big").forEach((elm) => {
-      elm.addEventListener("mouseover", onMouseOverB);
-      elm.addEventListener("mouseleave", onMouseLeaveB);
-    });
+  document.querySelectorAll(".cursor-link-big").forEach((elm) => {
+    elm.addEventListener("mouseover", onMouseOverB);
+    elm.addEventListener("mouseleave", onMouseLeaveB);
+  });
 
-    setTimeout(mouseListen, 2000);
-  }
+  setTimeout(mouseListen, 2000);
 }
 
 function mouseListen() {
