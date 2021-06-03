@@ -84,6 +84,11 @@
   article:nth-child(1) {
     grid-column: 2/3;
     grid-row: 1/2;
+
+    @media (max-width: 968px) {
+      margin: 30px auto;
+      transform: translateX(20px);
+    }
   }
 
   article:nth-child(2) {
@@ -94,6 +99,7 @@
 
     @media (max-width: 968px) {
       margin: 30px auto;
+      transform: translateX(-20px);
     }
 
     h3 {
@@ -109,6 +115,7 @@
 
     @media (max-width: 968px) {
       margin: 30px auto;
+      transform: translateX(20px);
     }
   }
 
@@ -153,5 +160,9 @@
 
   footer {
     margin-top: -150px;
+
+    p {
+      color: black;
+    }
   }
 }
