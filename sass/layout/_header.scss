@@ -79,19 +79,19 @@
     font-family: fenwick, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 3rem;
+    font-size: 2rem;
     transition: 0.3s;
-    line-height: 60px;
+    line-height: 50px;
     display: inline-block;
     // letter-spacing: -2px;
 
     @media (min-width: 768px) {
-      font-size: 4rem;
+      font-size: 3.4rem;
       line-height: 70px;
     }
     @media (min-width: 2400px) {
-      font-size: 6rem;
-      line-height: 115px;
+      font-size: 5rem;
+      line-height: 100px;
     }
 
     &:hover {

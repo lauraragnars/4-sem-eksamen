@@ -5,7 +5,11 @@
   }
 
   .practical-info-main {
-    margin-bottom: 100px;
+    margin-bottom: 600px;
+
+    @media (min-width: 968px) {
+      margin-bottom: 100px;
+    }
   }
 
   .info-text {

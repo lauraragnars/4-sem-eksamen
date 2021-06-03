@@ -31,6 +31,17 @@
     grid-template-rows: 1fr 1fr;
     grid-gap: 20px;
     // isolation: isolate;
+
+    @media (max-width: 968px) {
+      display: block;
+    }
+  }
+
+  main {
+    margin-bottom: 500px;
+    @media (min-width: 968px) {
+      margin-bottom: 0;
+    }
   }
 
   article {
@@ -38,6 +49,10 @@
     width: 400px;
     height: 500px;
     padding: 100px 90px 0px;
+
+    @media (max-width: 968px) {
+      margin: 30px auto;
+    }
 
     .desc,
     .ticket-link {
@@ -77,6 +92,10 @@
     justify-self: end;
     margin-top: -300px;
 
+    @media (max-width: 968px) {
+      margin: 30px auto;
+    }
+
     h3 {
       text-align: left;
     }
@@ -87,6 +106,10 @@
     grid-row: 2/3;
     margin-left: -100px;
     margin-top: -20px;
+
+    @media (max-width: 968px) {
+      margin: 30px auto;
+    }
   }
 
   button {
@@ -109,14 +132,6 @@
     border: 1px solid #999999;
     background-color: #cccccc;
     color: #666666;
-  }
-
-  .black-banner-top {
-    background-image: url(/assets/black_banner_top.svg);
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 87px;
-    margin-top: -30px;
   }
 
   #ticket-info {

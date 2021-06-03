@@ -51,7 +51,9 @@ function showData(data) {
       console.log(ticket);
       console.log(image.fields.file.url);
       if (ticket.fields.ticketType === image.fields.title) {
-        klon.querySelector("article").style.backgroundImage = `url(${image.fields.file.url})`;
+        klon.querySelector(
+          "article"
+        ).style.backgroundImage = `url(${image.fields.file.url})`;
       }
     });
 
@@ -64,9 +66,9 @@ function showData(data) {
       klon.querySelector(".ticket-button").disabled = false;
     }
 
-    if (ticket.fields.ticketType.includes("camping")) {
-      klon.querySelector("a").textContent = "here";
-    }
+    // if (ticket.fields.ticketType.includes("camping")) {
+    //   klon.querySelector("a").textContent = "here";
+    // }
 
     klon.querySelector(".ticket-type").textContent = ticket.fields.ticketType;
     klon.querySelector(".desc").textContent = ticket.fields.description;
